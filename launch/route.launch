@@ -3,8 +3,8 @@
   <!--node name="route" pkg="route_description" type="description" output="screen"> </node-->
   <include file="$(find ontologenius)/launch/ontologenius.launch">
     <arg name="files" default="
-     $(find route_description)/files/adream_mall.owl
-     $(find route_description)/files/place_description.owl
+     $(find semantic_route_description)/files/adream_mall.owl
+     $(find semantic_route_description)/files/place_description.owl
      "/>
   </include>
   <node name="gui" pkg="ontologenius" type="ontoloGUI" output="screen"> </node>
