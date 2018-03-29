@@ -5,6 +5,7 @@
     <arg name="files" default="
      $(find semantic_route_description)/files/adream_mall.owl
      $(find semantic_route_description)/files/place_description.owl
+     $(find semantic_route_description)/files/route_cost.owl
      "/>
   </include>
   <node name="gui" pkg="ontologenius" type="ontoloGUI" output="screen"> </node>
