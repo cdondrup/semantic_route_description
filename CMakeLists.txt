@@ -51,6 +51,7 @@ add_library(semantic_finder_lib
   src/CorridorPathfinder.cpp
   src/PlacePathfinder.cpp
   src/PlaceToRegion.cpp
+  src/CostComputer.cpp
 )
 
 add_executable(description src/main.cpp)

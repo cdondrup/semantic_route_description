@@ -78,6 +78,20 @@ std::string OntologyManipulator::getDown(std::string& name)
     return srv.response.value;
 }
 
+std::string OntologyManipulator::getRelatedFrom(const std::string& name)
+{
+  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
+
+  ontologenius::standard_service srv;
+  srv.request.action = "getRelatedFrom";
+  srv.request.param = name;
+
+  cpt++;
+
+  if(client.call(srv))
+    return srv.response.value;
+}
+
 bool OntologyManipulator::close()
 {
   ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/action");

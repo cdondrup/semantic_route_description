@@ -1,0 +1,61 @@
+<launch>
+
+  <node name="route" pkg="semantic_route_description" type="description" output="screen">
+    <rosparam>
+      salient: 0.1
+      accessible: 0.5
+      confortable: 0.7
+      secured:  0.5
+      explicable: 0.2
+    </rosparam>
+  </node>
+
+</launch>
+
+<!--L rosparam>
+  salient: 0.5
+  accessible: 0.5
+  confortable: 0.5
+  secured:  0.5
+  explicable: 0.5
+</rosparam-->
+
+<!--P rosparam>
+  salient: 0.5
+  accessible: 2.0
+  confortable: 0.9
+  secured:  0.7
+  explicable: 0.5
+</rosparam-->
+
+<!--C rosparam>
+  salient: 0.1
+  accessible: 0.5
+  confortable: 0.7
+  secured:  0.5
+  explicable: 0.2
+</rosparam-->
+
+<!--CP rosparam>
+  salient: 0.9
+  accessible: 0.5
+  confortable: 0.2
+  secured:  0.7
+  explicable: 0.7
+</rosparam-->
+
+<!--J rosparam>
+  salient: 0.3
+  accessible: 0.5
+  confortable: 0.2
+  secured:  0.9
+  explicable: 0.6
+</rosparam-->
+
+<!--A rosparam>
+  salient: 0.3
+  accessible: 0.8
+  confortable: 0.9
+  secured:  0.9
+  explicable: 0.6
+</rosparam-->

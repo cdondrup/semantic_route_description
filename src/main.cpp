@@ -1,8 +1,8 @@
 #include "route_description/OntologyManipulator.h"
 #include "route_description/RegionPathfinder.h"
-#include "route_description/CorridorPathfinder.h"
 #include "route_description/PlacePathfinder.h"
 #include "route_description/PlaceToRegion.h"
+#include "route_description/CostComputer.h"
 
 #include <iostream>
 #include "ros/ros.h"
@@ -46,7 +46,12 @@ int main(int argc, char** argv)
 
   ros::NodeHandle n;
   OntologyManipulator onto(&n);
+  CostComputer cost(&onto, &n);
   PlaceToRegion place_to_region(&onto);
+
+  float salient;
+  if (n.getParam(ros::this_node::getName() + "/salient", salient))
+    std::cout << "salient " << salient << std::endl;
 
   ros::service::waitForService("ontoloGenius/arguer", -1);
   onto.close();
@@ -155,6 +160,8 @@ int main(int argc, char** argv)
 
   std::cout << " completed routes are : " << std::endl;
   region_pathfinder.displayRoutes(completed_routes);
+
+  cost.compute(completed_routes);
 
   end = std::chrono::system_clock::now();
   int elapsed_seconds = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count();

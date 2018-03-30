@@ -18,6 +18,7 @@ public:
   std::string getFrom(const std::string& property, const std::string& name);
   std::string getUp(std::string& name);
   std::string getDown(std::string& name);
+  std::string getRelatedFrom(const std::string& name);
 
   size_t nb() {return cpt;}
   void reset() {cpt = 0;}
