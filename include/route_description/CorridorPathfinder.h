@@ -2,6 +2,7 @@
 #define CORRIDORPATHFINDER_H
 
 #include "route_description/OntologyManipulator.h"
+#include "route_description/Routes.h"
 
 #include <vector>
 #include <string>
@@ -12,10 +13,10 @@ public:
   CorridorPathfinder(OntologyManipulator* onto) {onto_ = onto; }
   ~CorridorPathfinder(){}
 
-  std::vector<std::vector<std::string>> find(std::string& my_corridor, std::string& goal_corridor, size_t& max_step);
+  routes_t find(std::string& my_corridor, std::string& goal_corridor, size_t& max_step);
 
-  void displayRoutes(std::vector<std::vector<std::string>> routes);
-  void displayRoute(std::vector<std::string> route);
+  void displayRoutes(routes_t routes);
+  void displayRoute(route_t route);
 
 private:
   OntologyManipulator* onto_;

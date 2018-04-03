@@ -2,6 +2,7 @@
 #define COSTCOMPUTER_H
 
 #include "route_description/OntologyManipulator.h"
+#include "route_description/Routes.h"
 
 #include "ros/ros.h"
 #include <string>
@@ -13,7 +14,7 @@ public:
   CostComputer(OntologyManipulator* onto, ros::NodeHandle* n);
   ~CostComputer(){}
 
-  std::vector<float> compute(std::vector<std::vector<std::string>>& routes);
+  std::vector<float> compute(routes_t& routes);
 
 private:
   OntologyManipulator* onto_;

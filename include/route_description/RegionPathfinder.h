@@ -2,6 +2,7 @@
 #define REGIONPATHFINDER_H
 
 #include "route_description/OntologyManipulator.h"
+#include "route_description/Routes.h"
 
 #include <vector>
 #include <string>
@@ -12,10 +13,10 @@ public:
   RegionPathfinder(OntologyManipulator* onto) {onto_ = onto; }
   ~RegionPathfinder(){}
 
-  std::vector<std::vector<std::string>> find(std::string my_region, std::string goal_region);
+  routes_t find(std::string my_region, std::string goal_region);
 
-  void displayRoutes(std::vector<std::vector<std::string>> routes);
-  void displayRoute(std::vector<std::string> route);
+  void displayRoutes(routes_t routes);
+  void displayRoute(route_t route);
 
 private:
   OntologyManipulator* onto_;

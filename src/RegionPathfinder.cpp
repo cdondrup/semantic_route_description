@@ -2,9 +2,9 @@
 
 #include <iostream>
 
-std::vector<std::vector<std::string>> RegionPathfinder::find(std::string my_region, std::string goal_region)
+routes_t RegionPathfinder::find(std::string my_region, std::string goal_region)
 {
-  std::vector<std::vector<std::string>> routes;
+  routes_t routes;
   bool found = false;
 
   {
@@ -18,7 +18,7 @@ std::vector<std::vector<std::string>> RegionPathfinder::find(std::string my_regi
 
   while(!found)
   {
-    std::vector<std::vector<std::string>> tmp_routes;
+    routes_t tmp_routes;
     for(size_t route_i = 0; route_i < routes.size(); route_i++)
     {
       size_t size = routes[route_i].size() - 1;
@@ -36,7 +36,7 @@ std::vector<std::vector<std::string>> RegionPathfinder::find(std::string my_regi
 
         for(size_t i = 0; i < regions.size(); i++)
         {
-          std::vector<std::string> tmp = routes[route_i];
+          route_t tmp = routes[route_i];
           tmp.push_back(interfaces[inter]);
           tmp.push_back(regions[i]);
           tmp_routes.push_back(tmp);
@@ -59,13 +59,13 @@ std::vector<std::vector<std::string>> RegionPathfinder::find(std::string my_regi
   return routes;
 }
 
-void RegionPathfinder::displayRoutes(std::vector<std::vector<std::string>> routes)
+void RegionPathfinder::displayRoutes(routes_t routes)
 {
   for(size_t route_i = 0; route_i < routes.size(); route_i++)
     displayRoute(routes[route_i]);
 }
 
-void RegionPathfinder::displayRoute(std::vector<std::string> route)
+void RegionPathfinder::displayRoute(route_t route)
 {
   for(size_t i = 0; i < route.size(); i++)
     std::cout << " -- " << route[i];

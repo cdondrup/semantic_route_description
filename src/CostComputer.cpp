@@ -65,7 +65,7 @@ float CostComputer::getParamCost(std::string param)
     return 1/cost;
 }
 
-std::vector<float> CostComputer::compute(std::vector<std::vector<std::string>>& routes)
+std::vector<float> CostComputer::compute(routes_t& routes)
 {
   std::vector<float> result;
   for(size_t route_i = 0; route_i < routes.size(); route_i++)

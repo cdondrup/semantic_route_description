@@ -2,9 +2,9 @@
 
 #include <iostream>
 
-std::vector<std::vector<std::string>> CorridorPathfinder::find(std::string& my_corridor, std::string& goal_corridor, size_t& max_step)
+routes_t CorridorPathfinder::find(std::string& my_corridor, std::string& goal_corridor, size_t& max_step)
 {
-  std::vector<std::vector<std::string>> routes;
+  routes_t routes;
   bool found = false;
   size_t progress = 0;
 
@@ -20,7 +20,7 @@ std::vector<std::vector<std::string>> CorridorPathfinder::find(std::string& my_c
   size_t cpt = 0;
   while(!found)
   {
-    std::vector<std::vector<std::string>> tmp_routes;
+    routes_t tmp_routes;
     for(size_t route_i = 0; route_i < routes.size(); route_i++)
     {
       size_t size = routes[route_i].size() - 1;
@@ -40,7 +40,7 @@ std::vector<std::vector<std::string>> CorridorPathfinder::find(std::string& my_c
         for(size_t i = 0; i < corridors.size(); i++)
         {
           progress++;
-          std::vector<std::string> tmp = routes[route_i];
+          route_t tmp = routes[route_i];
           tmp.push_back(markers[marker_i]);
           tmp.push_back(corridors[i]);
           tmp_routes.push_back(tmp);
@@ -75,13 +75,13 @@ std::vector<std::vector<std::string>> CorridorPathfinder::find(std::string& my_c
   return routes;
 }
 
-void CorridorPathfinder::displayRoutes(std::vector<std::vector<std::string>> routes)
+void CorridorPathfinder::displayRoutes(routes_t routes)
 {
   for(size_t route_i = 0; route_i < routes.size(); route_i++)
     displayRoute(routes[route_i]);
 }
 
-void CorridorPathfinder::displayRoute(std::vector<std::string> route)
+void CorridorPathfinder::displayRoute(route_t route)
 {
   for(size_t i = 0; i < route.size(); i++)
     std::cout << " -- " << route[i];

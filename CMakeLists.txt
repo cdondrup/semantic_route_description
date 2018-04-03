@@ -46,6 +46,7 @@ include_directories(
 
 ## Declare a C++ library
 add_library(semantic_finder_lib
+  src/Routes.cpp
   src/OntologyManipulator.cpp
   src/RegionPathfinder.cpp
   src/CorridorPathfinder.cpp

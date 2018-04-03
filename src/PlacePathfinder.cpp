@@ -1,9 +1,9 @@
 #include "route_description/PlacePathfinder.h"
 #include "route_description/CorridorPathfinder.h"
 
-std::vector<std::vector<std::string>> PlacePathfinder::find(std::string& my_place, std::string& goal_place, std::string& region)
+routes_t PlacePathfinder::find(std::string& my_place, std::string& goal_place, std::string& region)
 {
-  std::vector<std::vector<std::string>> routes;
+  routes_t routes;
   CorridorPathfinder corridor_pathfinder(onto_);
 
   std::vector<std::string> from_corridors = onto_->string2vector(onto_->getOn(my_place, "isAlong"));

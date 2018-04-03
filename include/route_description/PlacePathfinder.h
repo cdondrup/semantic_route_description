@@ -2,6 +2,7 @@
 #define PLACEPATHFINDER_H
 
 #include "route_description/OntologyManipulator.h"
+#include "route_description/Routes.h"
 
 #include <vector>
 #include <string>
@@ -12,7 +13,7 @@ public:
   PlacePathfinder(OntologyManipulator* onto) {onto_ = onto; }
   ~PlacePathfinder(){}
 
-  std::vector<std::vector<std::string>> find(std::string& my_place, std::string& goal_place, std::string& region);
+  routes_t find(std::string& my_place, std::string& goal_place, std::string& region);
 
 private:
   OntologyManipulator* onto_;
