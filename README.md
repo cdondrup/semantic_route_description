@@ -6,13 +6,13 @@
 
 Fisrt, launch the ontoloGenius with the semantic_route_description's files:
 ```
-$ roslaunch semantic_route_description route.launch
+$ roslaunch semantic_route_description route_ontology.launch
 ```
 A graphical user interface will be launched, close ontoloGenius with the button "Close Ontology" at the bottom left.
 
 Now, you can run the semantic_route_description:
 ```
-$ rosrun semantic_route_description description
+$ roslaunch semantic_route_description route_description.launch
 ```
 
 
