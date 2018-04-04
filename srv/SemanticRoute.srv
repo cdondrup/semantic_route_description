@@ -1,0 +1,6 @@
+string from
+string to
+string personna
+---
+Route[] routes
+float32[] costs
