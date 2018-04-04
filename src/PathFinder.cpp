@@ -15,8 +15,10 @@ PathFinder::PathFinder(ros::NodeHandle* n) : onto_(n)
   onto_.close();
 }
 
-void PathFinder::find(std::string from_place, std::string to_place)
+void PathFinder::find(std::string from_place, std::string to_place, std::string personnas)
 {
+  personnas_ = personnas;
+
   std::chrono::time_point<std::chrono::system_clock> start, end;
   start = std::chrono::system_clock::now();
 
@@ -132,7 +134,7 @@ void PathFinder::printFinalRoutes()
 void PathFinder::computeCost()
 {
   CostComputer cost(&onto_, n_);
-  costs_ = cost.compute(completed_routes_);
+  costs_ = cost.compute(completed_routes_, personnas_);
 
   for(size_t route_i = 0; route_i < costs_.size(); route_i++)
     std::cout << costs_[route_i] << std::endl;

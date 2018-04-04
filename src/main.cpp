@@ -14,7 +14,7 @@ bool route_handle(semantic_route_description::SemanticRoute::Request  &req,
                   semantic_route_description::SemanticRoute::Response &res)
 {
   PathFinder finder(n_);
-  finder.find(req.from, req.to);
+  finder.find(req.from, req.to, req.personna);
 
   routes_t tmp = finder.getRoutes();
   for(size_t i = 0; i < tmp.size(); i++)
@@ -37,10 +37,11 @@ int main(int argc, char** argv)
 
   ros::service::waitForService("ontoloGenius/arguer", -1);
   ros::ServiceServer service = n.advertiseService("semantic_route_description/getRoute", route_handle);
+  ROS_DEBUG("semantic_route_description ready");
 
   ros::spin();
 
-  ROS_DEBUG("KILL route_description");
+  ROS_DEBUG("KILL semantic_route_description");
 
   return 0;
 }

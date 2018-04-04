@@ -12,14 +12,14 @@ A graphical user interface will be launched, close ontoloGenius with the button 
 
 Now, you can run the semantic_route_description:
 ```
-$ roslaunch semantic_route_description route_description.launch
+$ rosrun semantic_route_description description
 ```
 
 ## Call the route description
 
 To get the route from **ff_c3_begin** to **reima**, call the getRoute service as follows:
 ```
-$ rosservice call /semantic_route_description/getRoute "{from_: 'ff_c3_begin', to: 'reima'}"
+$ rosservice call /semantic_route_description/getRoute "{from_: 'ff_c3_begin', to: 'reima', personna: 'lambda'}"
 ```
 
 The service definition is the following:
@@ -32,7 +32,14 @@ Route[] routes
 float32[] costs
 ```
 
-The personna parameter is not used at this time.
+For the personna parameter, you have six types of persona that you can combine with the `_` delimiter:
+ - lambda
+ - disabled
+ - knowing
+ - notKnowing
+ - young
+ - old
+
 The service will give you two arrays in return. Both arrays are the same size and give you a route (string array) and a cost for each corresponding route.
 
 
