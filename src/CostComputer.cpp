@@ -80,7 +80,6 @@ std::vector<float> CostComputer::compute(routes_t& routes)
     for(size_t j = 0; j < cost.size(); j++)
     {
       elementCost[havingCost[i]] = elementCost[havingCost[i]] * getParamCost(cost[j]);
-      std::cout << havingCost[i] << " : " << cost[j] << " : " << elementCost[havingCost[i]] << std::endl;
     }
 
     for(size_t route_i = 0; route_i < routes.size(); route_i++)
@@ -89,9 +88,6 @@ std::vector<float> CostComputer::compute(routes_t& routes)
         result[route_i] = result[route_i]*elementCost[havingCost[i]];
     }
   }
-
-  for(size_t route_i = 0; route_i < routes.size(); route_i++)
-    std::cout << result[route_i] << std::endl;
 
   return result;
 }
