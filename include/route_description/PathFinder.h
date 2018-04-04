@@ -18,6 +18,7 @@ public:
 
   void find(std::string from_place, std::string to_place);
   routes_t getRoutes() {return completed_routes_; }
+  std::vector<float> getCosts() {return costs_; }
 
 private:
   ros::NodeHandle* n_;

@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   ontologenius
   roscpp
   std_msgs
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -70,7 +71,7 @@ generate_messages(
 catkin_package(
   INCLUDE_DIRS include
 #  LIBRARIES semantic_route_description
-#  CATKIN_DEPENDS ontologenius roscpp std_msgs
+  CATKIN_DEPENDS ontologenius roscpp std_msgs
 #  DEPENDS system_lib
 )
 
@@ -102,4 +103,5 @@ add_executable(description src/main.cpp)
    ${catkin_LIBRARIES}
  )
  add_dependencies(description ${catkin_EXPORTED_TARGETS})
+ add_dependencies(description semantic_route_description_gencpp)
  target_link_libraries(description semantic_finder_lib)
