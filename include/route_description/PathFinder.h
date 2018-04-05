@@ -17,6 +17,7 @@ public:
   ~PathFinder() {}
 
   void find(std::string from_place, std::string to_place, std::string personnas);
+  void findRegions(std::string from_place, std::string to_place, std::string personnas);
   routes_t getRoutes() {return completed_routes_; }
   std::vector<float> getCosts() {return costs_; }
 

@@ -42,6 +42,32 @@ void PathFinder::find(std::string from_place, std::string to_place, std::string 
   std::cout << onto_.nb() << " requests done" << std::endl;
 }
 
+void PathFinder::findRegions(std::string from_place, std::string to_place, std::string personnas)
+{
+  personnas_ = personnas;
+
+  std::chrono::time_point<std::chrono::system_clock> start, end;
+  start = std::chrono::system_clock::now();
+
+  to_regions(from_place, to_place);
+  getRegionRoutes();
+
+  for(size_t i = 0; i < routes_.size(); i++)
+    for(size_t j = 0; j < routes_[i].size(); j++)
+      completed_routes_.push_back(routes_[i][j]);
+
+  computeCost();
+
+  end = std::chrono::system_clock::now();
+  int elapsed_seconds = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count();
+  std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+
+  std::cout << "finished computation at " << std::ctime(&end_time)
+            << "elapsed time: " << elapsed_seconds << "s\n";
+
+  std::cout << onto_.nb() << " requests done" << std::endl;
+}
+
 void PathFinder::to_regions(std::string from_place, std::string to_place)
 {
   PlaceToRegion place_to_region(&onto_);
