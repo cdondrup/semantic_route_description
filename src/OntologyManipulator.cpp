@@ -36,13 +36,21 @@ std::string OntologyManipulator::getOn(const std::string& name, const std::strin
     return srv.response.value;
 }
 
-std::string OntologyManipulator::getFrom(const std::string& property, const std::string& name)
+std::string OntologyManipulator::getFrom(const std::string& property, const std::string& name, const std::string& selector)
 {
   ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
 
   ontologenius::standard_service srv;
-  srv.request.action = "getFrom";
-  srv.request.param = name + ":" + property;
+  if(selector == "")
+  {
+    srv.request.action = "getFrom";
+    srv.request.param = name + ":" + property;
+  }
+  else
+  {
+    srv.request.action = "select:getFrom";
+    srv.request.param = selector + "=" + name + ":" + property;
+  }
 
   cpt++;
 

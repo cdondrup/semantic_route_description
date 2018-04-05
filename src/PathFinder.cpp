@@ -38,6 +38,8 @@ void PathFinder::find(std::string from_place, std::string to_place, std::string 
 
   std::cout << "finished computation at " << std::ctime(&end_time)
             << "elapsed time: " << elapsed_seconds << "s\n";
+
+  std::cout << onto_.nb() << " requests done" << std::endl;
 }
 
 void PathFinder::to_regions(std::string from_place, std::string to_place)

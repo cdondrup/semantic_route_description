@@ -24,8 +24,8 @@ routes_t CorridorPathfinder::find(std::string& my_corridor, std::string& goal_co
     for(size_t route_i = 0; route_i < routes.size(); route_i++)
     {
       size_t size = routes[route_i].size() - 1;
-      std::vector<std::string> markers = onto_->string2vector(onto_->getFrom("isAlong", routes[route_i][size]));
-      selectIntersections(markers);
+      std::vector<std::string> markers = onto_->string2vector(onto_->getFrom("isAlong", routes[route_i][size], "pathIntersection"));
+      //selectIntersections(markers);
 
       for(size_t marker_i = 0; marker_i < markers.size(); marker_i++)
       {
