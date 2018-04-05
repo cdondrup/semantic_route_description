@@ -22,7 +22,12 @@ To get the route from **ff_c3_begin** to **reima**, call the getRoute service as
 $ rosservice call /semantic_route_description/getRoute "{from_: 'ff_c3_begin', to: 'reima', personna: 'lambda'}"
 ```
 
-The service definition is the following:
+To get the route from **ff_c3_begin** to **reima** only with regions and interfaces, call the getRouteRegion service as follows:
+```
+$ rosservice call /semantic_route_description/getRouteRegion "{from_: 'ff_c3_begin', to: 'reima', personna: 'lambda'}"
+```
+
+The services definition is the following:
 ```
 string from
 string to
