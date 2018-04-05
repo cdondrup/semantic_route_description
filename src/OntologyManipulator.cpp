@@ -94,7 +94,7 @@ std::string OntologyManipulator::getRelatedFrom(const std::string& name)
 
 bool OntologyManipulator::close()
 {
-  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/action");
+  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/actions");
   ontologenius::standard_service srv;
   srv.request.action = "close";
 
