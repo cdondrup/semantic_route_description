@@ -48,7 +48,7 @@ bool routeRegion_handle(semantic_route_description::SemanticRoute::Request  &req
 
 int main(int argc, char** argv)
 {
-  ros::init(argc, argv, "route_description");
+  ros::init(argc, argv, "semantic_route_description");
 
   ros::NodeHandle n;
   n_ = &n;
