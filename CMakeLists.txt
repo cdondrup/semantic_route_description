@@ -97,6 +97,7 @@ add_library(semantic_finder_lib
   src/PlaceToRegion.cpp
   src/CostComputer.cpp
 )
+ add_dependencies(semantic_finder_lib ${catkin_EXPORTED_TARGETS})
 
 add_executable(description src/main.cpp)
  target_link_libraries(description
