@@ -82,7 +82,17 @@ void PathFinder::to_regions(std::string from_place, std::string to_place)
 {
   PlaceToRegion place_to_region(&onto_);
 
-  from_region_ = place_to_region.place2region(from_place);
+  if(onto_.isA(from_place, "place"))
+    from_region_ = place_to_region.place2region(from_place);
+  else if(onto_.isA(from_place, "path"))
+  {
+    std::vector<std::string> tmp = onto_.string2vector(onto_.getOn(from_place, "isIn"));
+    if(tmp.size())
+      from_region_.push_back(tmp[0]);
+  }
+  else if(onto_.isA(from_place, "region"))
+    from_region_.push_back(from_place);
+
   to_region_ = place_to_region.place2region(to_place);
 
   std::cout << "From :";
