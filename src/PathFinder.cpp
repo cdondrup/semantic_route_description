@@ -33,11 +33,11 @@ void PathFinder::find(std::string from_place, std::string to_place, std::string 
   computeCost();
 
   end = std::chrono::system_clock::now();
-  int elapsed_seconds = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count();
+  int elapsed_microseconds = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count();
   std::time_t end_time = std::chrono::system_clock::to_time_t(end);
 
   std::cout << "finished computation at " << std::ctime(&end_time)
-            << "elapsed time: " << elapsed_seconds << "s\n";
+            << "elapsed time: " << elapsed_microseconds << "us\n";
 
   std::cout << onto_.nb() << " requests done" << std::endl;
 }
@@ -59,11 +59,11 @@ void PathFinder::findRegions(std::string from_place, std::string to_place, std::
   computeCost();
 
   end = std::chrono::system_clock::now();
-  int elapsed_seconds = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count();
+  int elapsed_microseconds = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count();
   std::time_t end_time = std::chrono::system_clock::to_time_t(end);
 
   std::cout << "finished computation at " << std::ctime(&end_time)
-            << "elapsed time: " << elapsed_seconds << "s\n";
+            << "elapsed time: " << elapsed_microseconds << "us\n";
 
   std::cout << onto_.nb() << " requests done" << std::endl;
 }
