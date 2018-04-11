@@ -202,15 +202,15 @@
 
 
 
-    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#door_2 -->
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#interface_1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#door_2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#door"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#interface_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#interface"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_corridor_1"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_1"/>
         <place_description:isIn rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#adream_apartment"/>
         <place_description:isIn rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#adream_experiment_room"/>
-        <rdfs:label xml:lang="en">door</rdfs:label>
+        <rdfs:label xml:lang="en">passage</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -742,9 +742,9 @@
 
 
 
-    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#interface_1 -->
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#interface_2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#interface_1">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#interface_2">
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#interface"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_2"/>
         <place_description:isIn rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#adream_apartment"/>
