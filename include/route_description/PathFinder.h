@@ -41,6 +41,8 @@ private:
   void getCompleteRoutes();
   void printFinalRoutes();
   void computeCost();
+
+  bool testToPlace(std::string to_place);
 };
 
 #endif

@@ -16,7 +16,8 @@ public:
 
   std::string getOn(const std::string& name, const std::string& property);
   std::string getFrom(const std::string& property, const std::string& name, const std::string& selector = "");
-  std::string getUp(std::string& name);
+  std::string getUp(std::string& name, const std::string& selector = "");
+  bool isA(std::string& name, const std::string& base_class);
   std::string getDown(std::string& name);
   std::string getRelatedFrom(const std::string& name);
 

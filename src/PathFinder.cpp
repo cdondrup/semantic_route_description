@@ -22,15 +22,20 @@ void PathFinder::find(std::string from_place, std::string to_place, std::string 
   std::chrono::time_point<std::chrono::system_clock> start, end;
   start = std::chrono::system_clock::now();
 
-  to_regions(from_place, to_place);
-  getRegionRoutes();
-  appendFromAndTo(from_place, to_place);
+  if(testToPlace(to_place) == true)
+  {
+    to_regions(from_place, to_place);
+    getRegionRoutes();
+    appendFromAndTo(from_place, to_place);
 
-  createPlace2Place();
-  getCompleteRoutes();
-  printFinalRoutes();
+    createPlace2Place();
+    getCompleteRoutes();
+    printFinalRoutes();
 
-  computeCost();
+    computeCost();
+  }
+  else
+    std::cout << "[ERROR] goal must be a place" << std::endl;
 
   end = std::chrono::system_clock::now();
   int elapsed_microseconds = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count();
@@ -49,14 +54,19 @@ void PathFinder::findRegions(std::string from_place, std::string to_place, std::
   std::chrono::time_point<std::chrono::system_clock> start, end;
   start = std::chrono::system_clock::now();
 
-  to_regions(from_place, to_place);
-  getRegionRoutes();
+  if(testToPlace(to_place) == true)
+  {
+    to_regions(from_place, to_place);
+    getRegionRoutes();
 
-  for(size_t i = 0; i < routes_.size(); i++)
-    for(size_t j = 0; j < routes_[i].size(); j++)
-      completed_routes_.push_back(routes_[i][j]);
+    for(size_t i = 0; i < routes_.size(); i++)
+      for(size_t j = 0; j < routes_[i].size(); j++)
+        completed_routes_.push_back(routes_[i][j]);
 
-  computeCost();
+    computeCost();
+  }
+  else
+    std::cout << "[ERROR] goal must be a place" << std::endl;
 
   end = std::chrono::system_clock::now();
   int elapsed_microseconds = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count();
@@ -166,4 +176,9 @@ void PathFinder::computeCost()
 
   for(size_t route_i = 0; route_i < costs_.size(); route_i++)
     std::cout << costs_[route_i] << std::endl;
+}
+
+bool PathFinder::testToPlace(std::string to_place)
+{
+  return onto_.isA(to_place, "place");
 }
