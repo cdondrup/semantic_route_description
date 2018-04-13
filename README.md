@@ -19,12 +19,12 @@ $ rosrun semantic_route_description description
 
 To get the route from **ff_c3_begin** to **reima**, call the getRoute service as follows:
 ```
-$ rosservice call /semantic_route_description/getRoute "{from_: 'ff_c3_begin', to: 'reima', personna: 'lambda'}"
+$ rosservice call /semantic_route_description/get_route "{from_: 'ff_c3_begin', to: 'reima', personna: 'lambda'}"
 ```
 
 To get the route from **ff_c3_begin** to **reima** only with regions and interfaces, call the getRouteRegion service as follows:
 ```
-$ rosservice call /semantic_route_description/getRouteRegion "{from_: 'ff_c3_begin', to: 'reima', personna: 'lambda'}"
+$ rosservice call /semantic_route_description/get_route_region "{from_: 'ff_c3_begin', to: 'reima', personna: 'lambda'}"
 ```
 
 The services definition is the following:
