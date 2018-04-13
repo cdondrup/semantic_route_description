@@ -54,8 +54,8 @@ int main(int argc, char** argv)
   n_ = &n;
 
   ros::service::waitForService("ontoloGenius/arguer", -1);
-  ros::ServiceServer service = n.advertiseService("semantic_route_description/getRoute", route_handle);
-  ros::ServiceServer route_service = n.advertiseService("semantic_route_description/getRouteRegion", routeRegion_handle);
+  ros::ServiceServer service = n.advertiseService("semantic_route_description/get_route", route_handle);
+  ros::ServiceServer route_service = n.advertiseService("semantic_route_description/get_route_region", routeRegion_handle);
   ROS_DEBUG("semantic_route_description ready");
 
   ros::spin();
