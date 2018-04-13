@@ -24,15 +24,58 @@ void PathFinder::find(std::string from_place, std::string to_place, std::string 
 
   if(testToPlace(to_place) == true)
   {
-    to_regions(from_place, to_place);
-    getRegionRoutes();
-    appendFromAndTo(from_place, to_place);
+    if(testToPlace(from_place) == true)
+    {
+      to_regions(from_place, to_place);
+      getRegionRoutes();
+      appendFromAndTo(from_place, to_place);
 
-    createPlace2Place();
-    getCompleteRoutes();
-    printFinalRoutes();
+      createPlace2Place();
+      getCompleteRoutes();
+      printFinalRoutes();
 
-    computeCost();
+      computeCost();
+    }
+    else
+      std::cout << "[ERROR] initial position must be a place" << std::endl;
+  }
+  else
+    std::cout << "[ERROR] goal must be a place" << std::endl;
+
+  end = std::chrono::system_clock::now();
+  int elapsed_microseconds = std::chrono::duration_cast<std::chrono::microseconds>(end-start).count();
+  std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+
+  std::cout << "finished computation at " << std::ctime(&end_time)
+            << "elapsed time: " << elapsed_microseconds << "us\n";
+
+  std::cout << onto_.nb() << " requests done" << std::endl;
+}
+
+void PathFinder::findDirections(std::string from_place, std::string to_place, std::string personnas)
+{
+  personnas_ = personnas;
+
+  std::chrono::time_point<std::chrono::system_clock> start, end;
+  start = std::chrono::system_clock::now();
+
+  if(testToPlace(to_place) == true)
+  {
+    if(testToPlace(from_place) == true)
+    {
+      to_regions(from_place, to_place);
+      getRegionRoutes();
+      appendFromAndTo(from_place, to_place);
+
+      createPlace2Place();
+      getCompleteRoutes();
+      appendDirection();
+      printFinalRoutes();
+
+      computeCost();
+    }
+    else
+      std::cout << "[ERROR] initial position must be a place" << std::endl;
   }
   else
     std::cout << "[ERROR] goal must be a place" << std::endl;
@@ -170,6 +213,22 @@ void PathFinder::getCompleteRoutes()
       completed_routes_.insert(completed_routes_.end(), tmp_routes.begin(), tmp_routes.end());
     }
   }
+}
+
+void PathFinder::appendDirection()
+{
+  for(size_t route_i = 0; route_i < completed_routes_.size(); route_i++)
+    for(size_t i = 1; i < completed_routes_[route_i].size(); i+=2)
+    {
+      std::cout << completed_routes_[route_i][i] << " : " << completed_routes_[route_i][i+1] << std::endl;
+      std::string props = onto_.getWith(completed_routes_[route_i][i], completed_routes_[route_i][i+1]);
+      if(props.find("hasPathOnLeft") != std::string::npos)
+        completed_routes_[route_i][i] += "[left]";
+      else if(props.find("hasPathOnRight") != std::string::npos)
+        completed_routes_[route_i][i] += "[right]";
+      else if(props.find("hasPathOnEdge") != std::string::npos)
+        completed_routes_[route_i][i] += "[edge]";
+    }
 }
 
 void PathFinder::printFinalRoutes()

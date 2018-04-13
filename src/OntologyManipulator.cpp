@@ -58,6 +58,28 @@ std::string OntologyManipulator::getFrom(const std::string& property, const std:
     return srv.response.value;
 }
 
+std::string OntologyManipulator::getWith(const std::string& indiv_1, const std::string& indiv_2, const std::string& selector)
+{
+  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
+
+  ontologenius::standard_service srv;
+  if(selector == "")
+  {
+    srv.request.action = "getWith";
+    srv.request.param = indiv_1 + ":" + indiv_2;
+  }
+  else
+  {
+    srv.request.action = "select:getWith";
+    srv.request.param = selector + "=" + indiv_1 + ":" + indiv_2;
+  }
+
+  cpt++;
+
+  if(client.call(srv))
+    return srv.response.value;
+}
+
 std::string OntologyManipulator::getUp(std::string& name, const std::string& selector)
 {
   ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
