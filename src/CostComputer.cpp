@@ -4,12 +4,12 @@
 #include <limits>
 #include <map>
 
-const struct Personna CostComputer::lambda_personna = {"lambda", {0.2,0.2,0.2,0.2,0.2}};
-const struct Personna CostComputer::disabled_personna = {"disabled", {0.5,2.0,0.9,0.7,0.5}};
-const struct Personna CostComputer::knowing_personna = {"knowing", {0.1,0.5,0.7,0.5,0.2}};
-const struct Personna CostComputer::not_knowing_personna = {"notKnowing", {0.9,0.5,0.2,0.7,0.7}};
-const struct Personna CostComputer::young_personna = {"young", {0.3,0.5,0.2,0.9,0.6}};
-const struct Personna CostComputer::old_personna = {"old", {0.3,0.8,0.9,0.9,0.6}};
+const struct Personna CostComputer::lambda_persona = {"lambda", {0.2,0.2,0.2,0.2,0.2}};
+const struct Personna CostComputer::disabled_persona = {"disabled", {0.5,2.0,0.9,0.7,0.5}};
+const struct Personna CostComputer::knowing_persona = {"knowing", {0.1,0.5,0.7,0.5,0.2}};
+const struct Personna CostComputer::not_knowing_persona = {"notKnowing", {0.9,0.5,0.2,0.7,0.7}};
+const struct Personna CostComputer::young_persona = {"young", {0.3,0.5,0.2,0.9,0.6}};
+const struct Personna CostComputer::old_persona = {"old", {0.3,0.8,0.9,0.9,0.6}};
 
 CostComputer::CostComputer(OntologyManipulator* onto, ros::NodeHandle* n)
 {
@@ -25,7 +25,7 @@ CostComputer::CostComputer(OntologyManipulator* onto, ros::NodeHandle* n)
 
 std::vector<std::string> CostComputer::splitPersonnas(std::string text)
 {
-  std::vector<std::string> personnas;
+  std::vector<std::string> personas;
   size_t start = 0;
   size_t stop = 0;
 
@@ -34,35 +34,35 @@ std::vector<std::string> CostComputer::splitPersonnas(std::string text)
     stop = text.find("_", start);
     if(stop != std::string::npos)
     {
-      std::string personna = text.substr(start, stop - start);
-      personnas.push_back(personna);
+      std::string persona = text.substr(start, stop - start);
+      personas.push_back(persona);
 
       start = stop +1;
     }
   }
-  std::string personna = text.substr(start, stop - start);
-  personnas.push_back(personna);
+  std::string persona = text.substr(start, stop - start);
+  personas.push_back(persona);
 
-  for(size_t i = 0; i < personnas.size(); i++)
-    std::cout << personnas[i] << std::endl;
+  for(size_t i = 0; i < personas.size(); i++)
+    std::cout << personas[i] << std::endl;
 
-  return personnas;
+  return personas;
 }
 
-void CostComputer::getParam(std::string personna_name)
+void CostComputer::getParam(std::string persona_name)
 {
-  if(personna_name == lambda_personna.name)
-    updateCosts(lambda_personna.costs);
-  else if(personna_name == disabled_personna.name)
-    updateCosts(disabled_personna.costs);
-  else if(personna_name == knowing_personna.name)
-    updateCosts(knowing_personna.costs);
-  else if(personna_name == not_knowing_personna.name)
-    updateCosts(not_knowing_personna.costs);
-  else if(personna_name == young_personna.name)
-    updateCosts(young_personna.costs);
-  else if(personna_name == old_personna.name)
-    updateCosts(old_personna.costs);
+  if(persona_name == lambda_persona.name)
+    updateCosts(lambda_persona.costs);
+  else if(persona_name == disabled_persona.name)
+    updateCosts(disabled_persona.costs);
+  else if(persona_name == knowing_persona.name)
+    updateCosts(knowing_persona.costs);
+  else if(persona_name == not_knowing_persona.name)
+    updateCosts(not_knowing_persona.costs);
+  else if(persona_name == young_persona.name)
+    updateCosts(young_persona.costs);
+  else if(persona_name == old_persona.name)
+    updateCosts(old_persona.costs);
 }
 
 void CostComputer::updateCosts(struct Costs cost)
@@ -122,11 +122,11 @@ float CostComputer::getParamCost(std::string param)
     return 1/cost;
 }
 
-std::vector<float> CostComputer::compute(routes_t& routes, std::string personnas)
+std::vector<float> CostComputer::compute(routes_t& routes, std::string personas)
 {
-  std::vector<std::string> personnas_splitted = splitPersonnas(personnas);
-  for(size_t i = 0; i < personnas_splitted.size(); i++)
-    getParam(personnas_splitted[i]);
+  std::vector<std::string> personas_splitted = splitPersonnas(personas);
+  for(size_t i = 0; i < personas_splitted.size(); i++)
+    getParam(personas_splitted[i]);
 
   putInRange();
 

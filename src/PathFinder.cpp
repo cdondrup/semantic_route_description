@@ -15,9 +15,9 @@ PathFinder::PathFinder(ros::NodeHandle* n) : onto_(n)
   onto_.close();
 }
 
-void PathFinder::find(std::string from_place, std::string to_place, std::string personnas, bool signpost)
+void PathFinder::find(std::string from_place, std::string to_place, std::string personas, bool signpost)
 {
-  personnas_ = personnas;
+  personas_ = personas;
 
   std::vector<std::string> to_places;
   if(signpost == true)
@@ -69,9 +69,9 @@ void PathFinder::find(std::string from_place, std::string to_place)
   std::cout << onto_.nb() << " requests done" << std::endl;
 }
 
-void PathFinder::findDirections(std::string from_place, std::string to_place, std::string personnas, bool signpost)
+void PathFinder::findDirections(std::string from_place, std::string to_place, std::string personas, bool signpost)
 {
-  personnas_ = personnas;
+  personas_ = personas;
 
   std::vector<std::string> to_places;
   if(signpost == true)
@@ -121,9 +121,9 @@ void PathFinder::findDirections(std::string from_place, std::string to_place)
   std::cout << onto_.nb() << " requests done" << std::endl;
 }
 
-void PathFinder::findRegions(std::string from_place, std::string to_place, std::string personnas, bool signpost)
+void PathFinder::findRegions(std::string from_place, std::string to_place, std::string personas, bool signpost)
 {
-  personnas_ = personnas;
+  personas_ = personas;
 
   std::vector<std::string> to_places;
   if(signpost == true)
@@ -297,7 +297,7 @@ void PathFinder::printFinalRoutes()
 void PathFinder::computeCost()
 {
   CostComputer cost(&onto_, n_);
-  costs_ = cost.compute(completed_routes_, personnas_);
+  costs_ = cost.compute(completed_routes_, personas_);
 
   for(size_t route_i = 0; route_i < costs_.size(); route_i++)
     std::cout << costs_[route_i] << std::endl;

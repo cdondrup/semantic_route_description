@@ -25,18 +25,18 @@ struct Personna
 
 class CostComputer
 {
-  static const struct Personna lambda_personna;
-  static const struct Personna disabled_personna;
-  static const struct Personna knowing_personna;
-  static const struct Personna not_knowing_personna;
-  static const struct Personna young_personna;
-  static const struct Personna old_personna;
+  static const struct Personna lambda_persona;
+  static const struct Personna disabled_persona;
+  static const struct Personna knowing_persona;
+  static const struct Personna not_knowing_persona;
+  static const struct Personna young_persona;
+  static const struct Personna old_persona;
 
 public:
   CostComputer(OntologyManipulator* onto, ros::NodeHandle* n);
   ~CostComputer(){}
 
-  std::vector<float> compute(routes_t& routes, std::string personnas = "");
+  std::vector<float> compute(routes_t& routes, std::string personas = "");
 
 private:
   OntologyManipulator* onto_;
@@ -45,7 +45,7 @@ private:
   struct Costs costs_;
 
   std::vector<std::string> splitPersonnas(std::string text);
-  void getParam(std::string personna_name);
+  void getParam(std::string persona_name);
   void updateCosts(struct Costs cost);
   float getParamCost(std::string param);
   void putInRange();

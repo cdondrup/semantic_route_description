@@ -1,6 +1,6 @@
 string from
 string to
-string personna
+string persona
 bool signpost
 ---
 Route[] routes
