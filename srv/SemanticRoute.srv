@@ -1,6 +1,7 @@
 string from
 string to
 string personna
+bool signpost
 ---
 Route[] routes
 float32[] costs

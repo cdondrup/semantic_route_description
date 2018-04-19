@@ -14,7 +14,7 @@ bool route_handle(semantic_route_description::SemanticRoute::Request  &req,
                   semantic_route_description::SemanticRoute::Response &res)
 {
   PathFinder finder(n_);
-  finder.find(req.from, req.to, req.personna);
+  finder.find(req.from, req.to, req.personna, req.signpost);
 
   routes_t tmp = finder.getRoutes();
   for(size_t i = 0; i < tmp.size(); i++)
@@ -32,7 +32,7 @@ bool routeDirections_handle(semantic_route_description::SemanticRoute::Request  
                   semantic_route_description::SemanticRoute::Response &res)
 {
   PathFinder finder(n_);
-  finder.findDirections(req.from, req.to, req.personna);
+  finder.findDirections(req.from, req.to, req.personna, req.signpost);
 
   routes_t tmp = finder.getRoutes();
   for(size_t i = 0; i < tmp.size(); i++)
@@ -50,7 +50,7 @@ bool routeRegion_handle(semantic_route_description::SemanticRoute::Request  &req
                         semantic_route_description::SemanticRoute::Response &res)
 {
   PathFinder finder(n_);
-  finder.findRegions(req.from, req.to, req.personna);
+  finder.findRegions(req.from, req.to, req.personna, req.signpost);
 
   routes_t tmp = finder.getRoutes();
   for(size_t i = 0; i < tmp.size(); i++)

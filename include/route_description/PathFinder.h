@@ -16,9 +16,12 @@ public:
   PathFinder(ros::NodeHandle* n);
   ~PathFinder() {}
 
-  void find(std::string from_place, std::string to_place, std::string personnas);
-  void findDirections(std::string from_place, std::string to_place, std::string personnas);
-  void findRegions(std::string from_place, std::string to_place, std::string personnas);
+  void find(std::string from_place, std::string to_place, std::string personnas, bool signpost = false);
+  void find(std::string from_place, std::string to_place);
+  void findDirections(std::string from_place, std::string to_place, std::string personnas, bool signpost = false);
+  void findDirections(std::string from_place, std::string to_place);
+  void findRegions(std::string from_place, std::string to_place, std::string personnas, bool signpost = false);
+  void findRegions(std::string from_place, std::string to_place);
   routes_t getRoutes() {return completed_routes_; }
   std::vector<float> getCosts() {return costs_; }
 
@@ -35,6 +38,7 @@ private:
   routes_t completed_routes_;
   std::vector<float> costs_;
 
+  void init();
   void to_regions(std::string from_place, std::string to_place);
   void getRegionRoutes();
   void appendFromAndTo(std::string from_place, std::string to_place);

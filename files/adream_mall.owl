@@ -133,6 +133,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#burger_king_signpost_1">
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#signpost"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_1"/>
+        <place_description:makeReferenceTo rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#burger_king"/>
         <rdfs:label xml:lang="en">burger king is at fifty meter at left</rdfs:label>
     </owl:NamedIndividual>
     

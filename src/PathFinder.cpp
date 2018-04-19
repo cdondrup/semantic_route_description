@@ -15,10 +15,26 @@ PathFinder::PathFinder(ros::NodeHandle* n) : onto_(n)
   onto_.close();
 }
 
-void PathFinder::find(std::string from_place, std::string to_place, std::string personnas)
+void PathFinder::find(std::string from_place, std::string to_place, std::string personnas, bool signpost)
 {
   personnas_ = personnas;
 
+  std::vector<std::string> to_places;
+  if(signpost == true)
+  {
+    to_places = onto_.string2vector(onto_.getOn(to_place, "isReferencedBy"));
+  }
+  to_places.push_back(to_place);
+
+  for(size_t i = 0; i < to_places.size(); i++)
+  {
+    find(from_place, to_places[i]);
+    std::cout << to_places[i] << std::endl;
+  }
+}
+
+void PathFinder::find(std::string from_place, std::string to_place)
+{
   std::chrono::time_point<std::chrono::system_clock> start, end;
   start = std::chrono::system_clock::now();
 
@@ -26,6 +42,7 @@ void PathFinder::find(std::string from_place, std::string to_place, std::string 
   {
     if(testToPlace(from_place) == true)
     {
+      init();
       to_regions(from_place, to_place);
       getRegionRoutes();
       appendFromAndTo(from_place, to_place);
@@ -52,10 +69,26 @@ void PathFinder::find(std::string from_place, std::string to_place, std::string 
   std::cout << onto_.nb() << " requests done" << std::endl;
 }
 
-void PathFinder::findDirections(std::string from_place, std::string to_place, std::string personnas)
+void PathFinder::findDirections(std::string from_place, std::string to_place, std::string personnas, bool signpost)
 {
   personnas_ = personnas;
 
+  std::vector<std::string> to_places;
+  if(signpost == true)
+  {
+    to_places = onto_.string2vector(onto_.getOn(to_place, "isReferencedBy"));
+  }
+  to_places.push_back(to_place);
+
+  for(size_t i = 0; i < to_places.size(); i++)
+  {
+    findDirections(from_place, to_places[i]);
+    std::cout << to_places[i] << std::endl;
+  }
+}
+
+void PathFinder::findDirections(std::string from_place, std::string to_place)
+{
   std::chrono::time_point<std::chrono::system_clock> start, end;
   start = std::chrono::system_clock::now();
 
@@ -63,6 +96,7 @@ void PathFinder::findDirections(std::string from_place, std::string to_place, st
   {
     if(testToPlace(from_place) == true)
     {
+      init();
       to_regions(from_place, to_place);
       getRegionRoutes();
       appendFromAndTo(from_place, to_place);
@@ -90,15 +124,29 @@ void PathFinder::findDirections(std::string from_place, std::string to_place, st
   std::cout << onto_.nb() << " requests done" << std::endl;
 }
 
-void PathFinder::findRegions(std::string from_place, std::string to_place, std::string personnas)
+void PathFinder::findRegions(std::string from_place, std::string to_place, std::string personnas, bool signpost)
 {
   personnas_ = personnas;
 
+  std::vector<std::string> to_places;
+  if(signpost == true)
+  {
+    to_places = onto_.string2vector(onto_.getOn(to_place, "isReferencedBy"));
+  }
+  to_places.push_back(to_place);
+
+  for(size_t i = 0; i < to_places.size(); i++)
+    findRegions(from_place, to_places[i]);
+}
+
+void PathFinder::findRegions(std::string from_place, std::string to_place)
+{
   std::chrono::time_point<std::chrono::system_clock> start, end;
   start = std::chrono::system_clock::now();
 
   if(testToPlace(to_place) == true)
   {
+    init();
     to_regions(from_place, to_place);
     getRegionRoutes();
 
@@ -119,6 +167,13 @@ void PathFinder::findRegions(std::string from_place, std::string to_place, std::
             << "elapsed time: " << elapsed_microseconds << "us\n";
 
   std::cout << onto_.nb() << " requests done" << std::endl;
+}
+
+void PathFinder::init()
+{
+  from_region_.clear();
+  to_region_.clear();
+  routes_.clear();
 }
 
 void PathFinder::to_regions(std::string from_place, std::string to_place)
