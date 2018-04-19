@@ -48,7 +48,7 @@ void PathFinder::find(std::string from_place, std::string to_place)
       appendFromAndTo(from_place, to_place);
 
       createPlace2Place();
-      getCompleteRoutes();
+      getCompleteRoutes(to_place);
       printFinalRoutes();
 
       computeCost();
@@ -81,10 +81,7 @@ void PathFinder::findDirections(std::string from_place, std::string to_place, st
   to_places.push_back(to_place);
 
   for(size_t i = 0; i < to_places.size(); i++)
-  {
     findDirections(from_place, to_places[i]);
-    std::cout << to_places[i] << std::endl;
-  }
 }
 
 void PathFinder::findDirections(std::string from_place, std::string to_place)
@@ -102,7 +99,7 @@ void PathFinder::findDirections(std::string from_place, std::string to_place)
       appendFromAndTo(from_place, to_place);
 
       createPlace2Place();
-      getCompleteRoutes();
+      getCompleteRoutes(to_place);
       appendDirection();
       printFinalRoutes();
 
@@ -152,7 +149,10 @@ void PathFinder::findRegions(std::string from_place, std::string to_place)
 
     for(size_t i = 0; i < routes_.size(); i++)
       for(size_t j = 0; j < routes_[i].size(); j++)
+      {
         completed_routes_.push_back(routes_[i][j]);
+        goals_.push_back(to_place);
+      }
 
     computeCost();
   }
@@ -243,12 +243,13 @@ void PathFinder::createPlace2Place()
   }
 }
 
-void PathFinder::getCompleteRoutes()
+void PathFinder::getCompleteRoutes(std::string to_place)
 {
   for(size_t i = 0; i < routes_.size(); i++)
   {
     for(size_t route_i = 0; route_i < routes_[i].size(); route_i++)
     {
+      goals_.push_back(to_place);
       routes_t tmp_routes;
       {
         std::vector<std::string> tmp;

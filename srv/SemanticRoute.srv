@@ -5,3 +5,4 @@ bool signpost
 ---
 Route[] routes
 float32[] costs
+string[] goals

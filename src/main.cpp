@@ -24,6 +24,7 @@ bool route_handle(semantic_route_description::SemanticRoute::Request  &req,
     res.routes.push_back(tmp_route);
   }
   res.costs = finder.getCosts();
+  res.goals = finder.getGoals();
 
   return true;
 }
@@ -42,6 +43,7 @@ bool routeDirections_handle(semantic_route_description::SemanticRoute::Request  
     res.routes.push_back(tmp_route);
   }
   res.costs = finder.getCosts();
+  res.goals = finder.getGoals();
 
   return true;
 }
@@ -60,6 +62,7 @@ bool routeRegion_handle(semantic_route_description::SemanticRoute::Request  &req
     res.routes.push_back(tmp_route);
   }
   res.costs = finder.getCosts();
+  res.goals = finder.getGoals();
 
   return true;
 }

@@ -22,8 +22,10 @@ public:
   void findDirections(std::string from_place, std::string to_place);
   void findRegions(std::string from_place, std::string to_place, std::string personnas, bool signpost = false);
   void findRegions(std::string from_place, std::string to_place);
+
   routes_t getRoutes() {return completed_routes_; }
   std::vector<float> getCosts() {return costs_; }
+  std::vector<std::string> getGoals() {return goals_; }
 
 private:
   ros::NodeHandle* n_;
@@ -37,13 +39,14 @@ private:
 
   routes_t completed_routes_;
   std::vector<float> costs_;
+  std::vector<std::string> goals_;
 
   void init();
   void to_regions(std::string from_place, std::string to_place);
   void getRegionRoutes();
   void appendFromAndTo(std::string from_place, std::string to_place);
   void createPlace2Place();
-  void getCompleteRoutes();
+  void getCompleteRoutes(std::string to_place);
   void appendDirection();
   void printFinalRoutes();
   void computeCost();
