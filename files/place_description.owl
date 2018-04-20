@@ -314,6 +314,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#amusementPark -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#amusementPark">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#shop"/>
+        <rdfs:label xml:lang="en">amusement park</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#atm -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#atm">
@@ -342,6 +351,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#elevator">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#interface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hairdresser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hairdresser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#serviceShop"/>
     </owl:Class>
     
 
@@ -400,6 +417,14 @@
     <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#restaurant -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#restaurant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#shop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#serviceShop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#serviceShop">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#shop"/>
     </owl:Class>
     
