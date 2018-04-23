@@ -18,49 +18,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#isAfter -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#isAfter">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtLeftOfPath -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtLeftOfPath">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridor"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtRightOfPath -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtRightOfPath">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridor"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isIn -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isIn">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#region"/>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -86,6 +43,7 @@
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#isBefore"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
     </owl:ObjectProperty>
     
 
@@ -105,6 +63,39 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#isBefore">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hasAtBeginEdge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hasAtBeginEdge">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hasAtEdge"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtBeginEdge"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridorEdge"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hasAtEdge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hasAtEdge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEdge"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridorEdge"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hasAtEndEdge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hasAtEndEdge">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hasAtEdge"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEndEdge"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridorEdge"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
     </owl:ObjectProperty>
     
@@ -169,6 +160,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtBeginEdge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtBeginEdge">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEdge"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridorEdge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEdge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEdge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridorEdge"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEdgeOfPath -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEdgeOfPath">
@@ -176,6 +187,24 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridor"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtBeginEdge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#isAlong"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEndEdge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#isAlong"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEndEdge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEndEdge">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isAtEdge"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridorEdge"/>
     </owl:ObjectProperty>
     
 
@@ -186,6 +215,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#isAlong"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridor"/>
     </owl:ObjectProperty>
     
 
@@ -196,6 +226,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#isAlong"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#corridor"/>
     </owl:ObjectProperty>
     
 
@@ -208,6 +239,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#path"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#region"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#region"/>
     </owl:ObjectProperty>
     
 
