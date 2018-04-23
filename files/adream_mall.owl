@@ -185,9 +185,9 @@
 
 
 
-    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#door_h20_1 -->
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#door_h20 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#door_h20_1">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#door_h20">
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#door"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_1"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_hall"/>
