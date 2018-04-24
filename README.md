@@ -2,20 +2,20 @@
  [![Dependency Status][Dependency-Image]][Dependency-Url]
 
 
-## Launch the semantic route description
+### Launch the semantic route description
 
 Fisrt, launch the ontoloGenius with the semantic_route_description's files:
 ```
 $ roslaunch semantic_route_description route_ontology.launch
 ```
-A graphical user interface will be launched, close ontoloGenius with the button "Close Ontology" at the bottom left.
+A graphical user interface will be launched but you don't have to use it.
 
 Now, you can run the semantic_route_description:
 ```
 $ rosrun semantic_route_description description
 ```
 
-## Call the route description
+### Call the route description
 
 The services definition is the following:
 ```
@@ -31,33 +31,129 @@ string[] goals
 
 The service will give you three arrays in return. All arrays are the same size and give you a route (string array), a cost for each corresponding route and the final location for each corresponding route.
 
-### Basic usage
-
-To get the route from **ff_c3_begin** to **reima**, call the getRoute service as follows:
-```
-$ rosservice call /semantic_route_description/get_route "{from_: 'ff_c3_begin', to: 'reima', persona: 'lambda'}"
-```
-
-To get the route from **ff_c3_begin** to **reima** only with regions and interfaces, call the getRouteRegion service as follows:
-```
-$ rosservice call /semantic_route_description/get_route_region "{from_: 'ff_c3_begin', to: 'reima', persona: 'lambda'}"
-```
-
 ### Persona usage
 
 For the persona parameter, you have six types of persona that you can combine with the `_` delimiter:
  - lambda
+    - knowing
+    - notKnowing
  - disabled
- - knowing
- - notKnowing
+    - disabled_knowing
+    - disabled_ notKnowing
  - young
+    - young_knowing
+    - young_ notKnowing
  - old
+    - old_knowing
+    - old_ notKnowing
+
+## Route region usage
+
+---
+A route region can start from a place, a path or a region and **must** end at a place.
+Usually, we start from robot_infodesk (or robot_infodesk_2, ...).
+
+---
+
+To get the route from **robot_infodesk** to **burger_king** only with regions and interfaces, call the getRouteRegion service as follows:
+```
+$ rosservice call /semantic_route_description/get_route_region "{from_: 'robot_infodesk', to: 'burger_king', persona: 'lambda'}"
+```
+
+When you make this request, you should have the following result:
+```
+routes:
+  -
+    route: [adream_experiment_room, door_C, outside, ff_door_1, first_floor]
+  -
+    route: [adream_experiment_room, door_D, outside, ff_door_1, first_floor]
+  -
+    route: [adream_experiment_room, door_E, outside, ff_door_1, first_floor]
+  -
+    route: [adream_experiment_room, door_h20, adream_hall, elevator_1, first_floor]
+  -
+    route: [adream_experiment_room, door_h20, adream_hall, stairs_1, first_floor]
+
+costs: [7.2, 7.2, 7.2, 4.16, 6.0]
+
+goals: [burger_king, burger_king, burger_king, burger_king, burger_king]
+```
 
 ### Signpost usage
 
 The signpost parameter can be set to true to allow the route description to find routes that do not go directly to the requested location but that go to a sign bound to that location.
 If you use this option, you can use the `goals` result which indicates the final destination of each route.
 
+```
+$ rosservice call /semantic_route_description/get_route_region "{from_: 'robot_infodesk', to: 'burger_king', persona: 'lambda', signpost: true}"
+```
+
+When you make this request, you should have the following result:
+```
+routes:
+  -
+    route: [adream_experiment_room]
+  -
+    route: [adream_experiment_room, door_C, outside, ff_door_1, first_floor]
+  -
+    route: [adream_experiment_room, door_D, outside, ff_door_1, first_floor]
+  -
+    route: [adream_experiment_room, door_E, outside, ff_door_1, first_floor]
+  -
+    route: [adream_experiment_room, door_h20, adream_hall, elevator_1, first_floor]
+  -
+    route: [adream_experiment_room, door_h20, adream_hall, stairs_1, first_floor]
+
+costs: [1.0, 7.2, 7.2, 7.2, 4.16, 6.0]
+
+goals: [burger_king_signpost_1, burger_king, burger_king, burger_king, burger_king, burger_king]
+```
+
+Here you can notice that a burger king signpost is present in the adream experiment room.
+
+## Route place usage
+
+---
+A route place **must** start from a place and **must** end at a place.
+Usually, we start from robot_infodesk (or robot_infodesk_2, ...).
+
+---
+
+To get the route from **robot_infodesk** to **burger_king**, call the getRoute service as follows:
+```
+$ rosservice call /semantic_route_description/get_route "{from_: 'robot_infodesk', to: 'burger_king', persona: 'lambda'}"
+```
+
+When you make this request, you should have the following result:
+```
+routes:
+  -
+    route: [robot_infodesk, os_exp_1, gf_ww1_os1_intersection, gf_walkway_1, door_C, outside,
+  ff_door_1, ff_corridor_4, burger_king]
+  -
+    route: [robot_infodesk, os_exp_1, gf_ww2_os1_intersection, gf_walkway_2, door_D, outside,
+  ff_door_1, ff_corridor_4, burger_king]
+  -
+    route: [robot_infodesk, os_exp_1, door_E, outside, ff_door_1, ff_corridor_4, burger_king]
+  -
+    route: [robot_infodesk, os_exp_1, door_h20, os_hall, elevator_1, ff_corridor_3, ff_c34_intersection,
+  ff_corridor_4, burger_king]
+  -
+    route: [robot_infodesk, os_exp_1, door_h20, os_hall, stairs_1, ff_corridor_3, ff_c34_intersection,
+  ff_corridor_4, burger_king]
+
+costs: [12.96, 12.96, 10.08, 7.5, 10.8]
+
+goals: [burger_king, burger_king, burger_king, burger_king, burger_king]
+```
+Here you have a more precise route that will give you the path where you have to go.
+
+### Signpost usage
+
+As for the route region, you can ask to take signpost in account like it:
+```
+$ rosservice call /semantic_route_description/get_route "{from_: 'robot_infodesk', to: 'burger_king', persona: 'lambda', signpost: true}"
+```
 
 [License-Url]: https://opensource.org/licenses/Apache-2.0
 [License-Image]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
