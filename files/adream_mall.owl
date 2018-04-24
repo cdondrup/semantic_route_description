@@ -193,6 +193,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#door"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_2"/>
         <place_description:isAtBeginEdgeOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_walkway_1"/>
+        <place_description:isAtLeftOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#daddys_diner"/>
         <rdfs:label xml:lang="en">door</rdfs:label>
     </owl:NamedIndividual>
 
@@ -214,6 +215,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#door"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_1"/>
         <place_description:isAtEndEdgeOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_walkway_1"/>
+        <place_description:isAtRightOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#marimekko_outlet"/>
         <rdfs:label xml:lang="en">door</rdfs:label>
     </owl:NamedIndividual>
 
@@ -878,8 +880,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ilopilleri">
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#restaurant"/>
-        <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_walkway_2"/>
         <place_description:hasAtRight rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#zizzi"/>
+        <adream_mall:isAtRightOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_walkway_2"/>
         <rdfs:label xml:lang="en">kahvila ilopilleri</rdfs:label>
     </owl:NamedIndividual>
 
