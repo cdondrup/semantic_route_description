@@ -246,6 +246,10 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#region"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#region"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#isAlong"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#isIn"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
