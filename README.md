@@ -34,18 +34,18 @@ The service will give you three arrays in return. All arrays are the same size a
 ### Persona usage
 
 For the persona parameter, you have six types of persona that you can combine with the `_` delimiter:
- - lambda
-    - knowing
-    - notKnowing
- - disabled
-    - disabled_knowing
-    - disabled_ notKnowing
- - young
-    - young_knowing
-    - young_ notKnowing
- - old
-    - old_knowing
-    - old_ notKnowing
+ - **lambda** : Average person
+    - **knowing** : Person who know the place and will prefer comfort
+    - **notKnowing** : Person who knows the place and will prefer the comfort
+ - **disabled** : Person who can not take stairs and will need accessibility
+    - **disabled_knowing**
+    - **disabled_ notKnowing**
+ - **young** : A young person who will prefer security
+    - **young_knowing**
+    - **young_ notKnowing**
+ - **old** : Older person who will prefer comfort and safety
+    - **old_knowing**
+    - **old_ notKnowing**
 
 ## Route region usage
 
@@ -55,7 +55,7 @@ Usually, we start from robot_infodesk (or robot_infodesk_2, ...).
 
 ---
 
-To get the route from **robot_infodesk** to **burger_king** only with regions and interfaces, call the getRouteRegion service as follows:
+To get the route from **robot_infodesk** to **burger_king**, for an average person, only with regions and interfaces, call the getRouteRegion service as follows:
 ```
 $ rosservice call /semantic_route_description/get_route_region "{from_: 'robot_infodesk', to: 'burger_king', persona: 'lambda'}"
 ```
@@ -78,6 +78,8 @@ costs: [7.2, 7.2, 7.2, 4.16, 6.0]
 
 goals: [burger_king, burger_king, burger_king, burger_king, burger_king]
 ```
+
+> The same request with a disabled person would have given [inf, inf, inf, 2.6315789222717285, inf] as costs. We can see that the only possible route is the one with the escalator.
 
 ### Signpost usage
 
