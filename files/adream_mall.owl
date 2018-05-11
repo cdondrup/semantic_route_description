@@ -104,6 +104,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#burger_king">
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#restaurant"/>
         <place_description:isAtRightOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_4"/>
+        <place_description:hasSaliency rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</place_description:hasSaliency>
         <rdfs:label xml:lang="en">burger king</rdfs:label>
     </owl:NamedIndividual>
     
@@ -599,6 +600,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#amusementPark"/>
         <place_description:isAtBeginEdgeOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_1"/>
         <place_description:isAtRightOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_2"/>
+        <place_description:hasSaliency rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</place_description:hasSaliency>
     </owl:NamedIndividual>
     
 
@@ -876,6 +878,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#clothes_shop"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_2"/>
         <place_description:isAtBeginEdgeOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_walkway_2"/>
+        <place_description:hasSaliency rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</place_description:hasSaliency>
         <rdfs:label xml:lang="en">H&amp;M</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1051,6 +1054,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#starbucks">
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#restaurant"/>
+        <place_description:hasSaliency rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.95</place_description:hasSaliency>
         <place_description:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_2"/>
         <rdfs:label xml:lang="en">starbucks</rdfs:label>
     </owl:NamedIndividual>
