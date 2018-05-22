@@ -24,6 +24,7 @@ std::vector<std::string> OntologyManipulator::string2vector(const std::string& v
 
 std::string OntologyManipulator::getOn(const std::string& name, const std::string& property)
 {
+  std::string res = "";
   ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
 
   ontologenius::standard_service srv;
@@ -34,10 +35,13 @@ std::string OntologyManipulator::getOn(const std::string& name, const std::strin
 
   if(client.call(srv))
     return srv.response.value;
+  else
+    return res;
 }
 
 std::string OntologyManipulator::getFrom(const std::string& property, const std::string& name, const std::string& selector)
 {
+  std::string res = "";
   ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
 
   ontologenius::standard_service srv;
@@ -56,10 +60,13 @@ std::string OntologyManipulator::getFrom(const std::string& property, const std:
 
   if(client.call(srv))
     return srv.response.value;
+  else
+    return res;
 }
 
 std::string OntologyManipulator::getWith(const std::string& indiv_1, const std::string& indiv_2, const std::string& selector)
 {
+  std::string res = "";
   ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
 
   ontologenius::standard_service srv;
@@ -78,10 +85,13 @@ std::string OntologyManipulator::getWith(const std::string& indiv_1, const std::
 
   if(client.call(srv))
     return srv.response.value;
+  else
+    return res;
 }
 
 std::string OntologyManipulator::getUp(std::string& name, const std::string& selector)
 {
+  std::string res = "";
   ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
 
   ontologenius::standard_service srv;
@@ -100,6 +110,8 @@ std::string OntologyManipulator::getUp(std::string& name, const std::string& sel
 
   if(client.call(srv))
     return srv.response.value;
+  else
+    return res;
 }
 
 bool OntologyManipulator::isA(std::string& name, const std::string& base_class)
@@ -112,6 +124,7 @@ bool OntologyManipulator::isA(std::string& name, const std::string& base_class)
 
 std::string OntologyManipulator::getDown(std::string& name)
 {
+  std::string res = "";
   ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
 
   ontologenius::standard_service srv;
@@ -122,10 +135,13 @@ std::string OntologyManipulator::getDown(std::string& name)
 
   if(client.call(srv))
     return srv.response.value;
+  else
+    return res;
 }
 
 std::string OntologyManipulator::getRelatedFrom(const std::string& name)
 {
+  std::string res = "";
   ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
 
   ontologenius::standard_service srv;
@@ -136,6 +152,8 @@ std::string OntologyManipulator::getRelatedFrom(const std::string& name)
 
   if(client.call(srv))
     return srv.response.value;
+  else
+    return res;
 }
 
 bool OntologyManipulator::close()
