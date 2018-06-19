@@ -3,6 +3,7 @@
 #include <iostream>
 #include <chrono>
 #include <ctime>
+#include <algorithm>
 
 #include "route_description/PlaceToRegion.h"
 #include "route_description/RegionPathfinder.h"
@@ -22,7 +23,7 @@ void PathFinder::find(std::string from_place, std::string to_place, std::string 
   std::vector<std::string> to_places;
   if(signpost == true)
   {
-    to_places = onto_.string2vector(onto_.getOn(to_place, "isReferencedBy"));
+    to_places = onto_.getOn(to_place, "isReferencedBy");
   }
   to_places.push_back(to_place);
 
@@ -76,7 +77,7 @@ void PathFinder::findDirections(std::string from_place, std::string to_place, st
   std::vector<std::string> to_places;
   if(signpost == true)
   {
-    to_places = onto_.string2vector(onto_.getOn(to_place, "isReferencedBy"));
+    to_places = onto_.getOn(to_place, "isReferencedBy");
   }
   to_places.push_back(to_place);
 
@@ -128,7 +129,7 @@ void PathFinder::findRegions(std::string from_place, std::string to_place, std::
   std::vector<std::string> to_places;
   if(signpost == true)
   {
-    to_places = onto_.string2vector(onto_.getOn(to_place, "isReferencedBy"));
+    to_places = onto_.getOn(to_place, "isReferencedBy");
   }
   to_places.push_back(to_place);
 
@@ -184,7 +185,7 @@ void PathFinder::to_regions(std::string from_place, std::string to_place)
     from_region_ = place_to_region.place2region(from_place);
   else if(onto_.isA(from_place, "path"))
   {
-    std::vector<std::string> tmp = onto_.string2vector(onto_.getOn(from_place, "isIn"));
+    std::vector<std::string> tmp = onto_.getOn(from_place, "isIn");
     if(tmp.size())
       from_region_.push_back(tmp[0]);
   }
@@ -277,12 +278,12 @@ void PathFinder::appendDirection()
     for(size_t i = 1; i < completed_routes_[route_i].size(); i+=2)
     {
       std::cout << completed_routes_[route_i][i] << " : " << completed_routes_[route_i][i+1] << std::endl;
-      std::string props = onto_.getWith(completed_routes_[route_i][i], completed_routes_[route_i][i+1]);
-      if(props.find("hasPathOnLeft") != std::string::npos)
+      std::vector<std::string> props = onto_.getWith(completed_routes_[route_i][i], completed_routes_[route_i][i+1]);
+      if(std::find(props.begin(), props.end(), "hasPathOnLeft") != props.end())
         completed_routes_[route_i][i] += "[left]";
-      else if(props.find("hasPathOnRight") != std::string::npos)
+      else if(std::find(props.begin(), props.end(), "hasPathOnRight") != props.end())
         completed_routes_[route_i][i] += "[right]";
-      else if(props.find("hasPathOnEdge") != std::string::npos)
+      else if(std::find(props.begin(), props.end(), "hasPathOnEdge") != props.end())
         completed_routes_[route_i][i] += "[edge]";
     }
 }

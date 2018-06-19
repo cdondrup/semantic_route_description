@@ -1,6 +1,8 @@
 #include "route_description/OntologyManipulator.h"
 
-#include "ontologenius/standard_service.h"
+#include "ontologenius/OntologeniusService.h"
+
+#include <iostream>
 
 std::vector<std::string> OntologyManipulator::string2vector(const std::string& value)
 {
@@ -22,29 +24,29 @@ std::vector<std::string> OntologyManipulator::string2vector(const std::string& v
   return result;
 }
 
-std::string OntologyManipulator::getOn(const std::string& name, const std::string& property)
+std::vector<std::string> OntologyManipulator::getOn(const std::string& name, const std::string& property)
 {
-  std::string res = "";
-  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
+  std::vector<std::string> res;
+  ros::ServiceClient client = n_->serviceClient<ontologenius::OntologeniusService>("ontologenius/individual");
 
-  ontologenius::standard_service srv;
+  ontologenius::OntologeniusService srv;
   srv.request.action = "getOn";
   srv.request.param = name + ":" + property;
 
   cpt++;
 
   if(client.call(srv))
-    return srv.response.value;
+    return srv.response.values;
   else
     return res;
 }
 
-std::string OntologyManipulator::getFrom(const std::string& property, const std::string& name, const std::string& selector)
+std::vector<std::string> OntologyManipulator::getFrom(const std::string& property, const std::string& name, const std::string& selector)
 {
-  std::string res = "";
-  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
+  std::vector<std::string> res;
+  ros::ServiceClient client = n_->serviceClient<ontologenius::OntologeniusService>("ontologenius/individual");
 
-  ontologenius::standard_service srv;
+  ontologenius::OntologeniusService srv;
   if(selector == "")
   {
     srv.request.action = "getFrom";
@@ -59,17 +61,17 @@ std::string OntologyManipulator::getFrom(const std::string& property, const std:
   cpt++;
 
   if(client.call(srv))
-    return srv.response.value;
+    return srv.response.values;
   else
     return res;
 }
 
-std::string OntologyManipulator::getWith(const std::string& indiv_1, const std::string& indiv_2, const std::string& selector)
+std::vector<std::string> OntologyManipulator::getWith(const std::string& indiv_1, const std::string& indiv_2, const std::string& selector)
 {
-  std::string res = "";
-  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
+  std::vector<std::string> res;
+  ros::ServiceClient client = n_->serviceClient<ontologenius::OntologeniusService>("ontologenius/individual");
 
-  ontologenius::standard_service srv;
+  ontologenius::OntologeniusService srv;
   if(selector == "")
   {
     srv.request.action = "getWith";
@@ -84,17 +86,17 @@ std::string OntologyManipulator::getWith(const std::string& indiv_1, const std::
   cpt++;
 
   if(client.call(srv))
-    return srv.response.value;
+    return srv.response.values;
   else
     return res;
 }
 
-std::string OntologyManipulator::getUp(std::string& name, const std::string& selector)
+std::vector<std::string> OntologyManipulator::getUp(std::string& name, const std::string& selector)
 {
-  std::string res = "";
-  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
+  std::vector<std::string> res;
+  ros::ServiceClient client = n_->serviceClient<ontologenius::OntologeniusService>("ontologenius/individual");
 
-  ontologenius::standard_service srv;
+  ontologenius::OntologeniusService srv;
   if(selector == "")
   {
     srv.request.action = "getUp";
@@ -109,57 +111,58 @@ std::string OntologyManipulator::getUp(std::string& name, const std::string& sel
   cpt++;
 
   if(client.call(srv))
-    return srv.response.value;
+    return srv.response.values;
   else
     return res;
 }
 
 bool OntologyManipulator::isA(std::string& name, const std::string& base_class)
 {
-  if(getUp(name, base_class) == "")
+  std::vector<std::string> res = getUp(name, base_class);
+  if(res.size() == 0)
     return false;
   else
     return true;
 }
 
-std::string OntologyManipulator::getDown(std::string& name)
+std::vector<std::string> OntologyManipulator::getDown(std::string& name)
 {
-  std::string res = "";
-  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
+  std::vector<std::string> res;
+  ros::ServiceClient client = n_->serviceClient<ontologenius::OntologeniusService>("ontologenius/individual");
 
-  ontologenius::standard_service srv;
+  ontologenius::OntologeniusService srv;
   srv.request.action = "getDown";
   srv.request.param = name;
 
   cpt++;
 
   if(client.call(srv))
-    return srv.response.value;
+    return srv.response.values;
   else
     return res;
 }
 
-std::string OntologyManipulator::getRelatedFrom(const std::string& name)
+std::vector<std::string> OntologyManipulator::getRelatedFrom(const std::string& name)
 {
-  std::string res = "";
-  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/individual");
+  std::vector<std::string> res;
+  ros::ServiceClient client = n_->serviceClient<ontologenius::OntologeniusService>("ontologenius/individual");
 
-  ontologenius::standard_service srv;
+  ontologenius::OntologeniusService srv;
   srv.request.action = "getRelatedFrom";
   srv.request.param = name;
 
   cpt++;
 
   if(client.call(srv))
-    return srv.response.value;
+    return srv.response.values;
   else
     return res;
 }
 
 bool OntologyManipulator::close()
 {
-  ros::ServiceClient client = n_->serviceClient<ontologenius::standard_service>("ontoloGenius/actions");
-  ontologenius::standard_service srv;
+  ros::ServiceClient client = n_->serviceClient<ontologenius::OntologeniusService>("ontologenius/actions");
+  ontologenius::OntologeniusService srv;
   srv.request.action = "close";
 
   cpt++;

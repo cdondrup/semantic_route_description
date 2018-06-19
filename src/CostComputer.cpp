@@ -135,11 +135,11 @@ std::vector<float> CostComputer::compute(routes_t& routes, std::string personas)
     result.push_back(routes[route_i].size());
 
   std::map<std::string, float> elementCost;
-  std::vector<std::string> havingCost = onto_->string2vector(onto_->getRelatedFrom("hasCost"));
+  std::vector<std::string> havingCost = onto_->getRelatedFrom("hasCost");
   for(size_t i = 0; i < havingCost.size(); i++)
   {
     elementCost[havingCost[i]] = 1.0;
-    std::vector<std::string> cost = onto_->string2vector(onto_->getOn(havingCost[i], "hasCost"));
+    std::vector<std::string> cost = onto_->getOn(havingCost[i], "hasCost");
     for(size_t j = 0; j < cost.size(); j++)
     {
       elementCost[havingCost[i]] = elementCost[havingCost[i]] * getParamCost(cost[j]);
