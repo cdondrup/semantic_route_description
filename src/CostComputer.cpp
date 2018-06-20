@@ -4,12 +4,12 @@
 #include <limits>
 #include <map>
 
-const struct Personna CostComputer::lambda_persona = {"lambda", {0.2,0.2,0.2,0.2,0.2}};
-const struct Personna CostComputer::disabled_persona = {"disabled", {0.5,2.0,0.9,0.7,0.5}};
-const struct Personna CostComputer::knowing_persona = {"knowing", {0.1,0.5,0.7,0.5,0.2}};
-const struct Personna CostComputer::not_knowing_persona = {"notKnowing", {0.9,0.5,0.2,0.7,0.7}};
-const struct Personna CostComputer::young_persona = {"young", {0.3,0.5,0.2,0.9,0.6}};
-const struct Personna CostComputer::old_persona = {"old", {0.3,0.8,0.9,0.9,0.6}};
+const struct Personna CostComputer::lambda_persona = {"lambda", {0.2,0.2,0.2,0.2,0.2,0.6}};
+const struct Personna CostComputer::disabled_persona = {"disabled", {0.5,2.0,0.9,0.7,0.5,0.0}};
+const struct Personna CostComputer::knowing_persona = {"knowing", {0.1,0.5,0.6,0.5,0.2,0.7}};
+const struct Personna CostComputer::not_knowing_persona = {"notKnowing", {0.9,0.5,0.2,0.7,0.7,0.2}};
+const struct Personna CostComputer::young_persona = {"young", {0.3,0.5,0.2,0.9,0.6,0.9}};
+const struct Personna CostComputer::old_persona = {"old", {0.3,0.8,0.9,0.9,0.6,0.1}};
 
 CostComputer::CostComputer(OntologyManipulator* onto, ros::NodeHandle* n)
 {
@@ -21,6 +21,7 @@ CostComputer::CostComputer(OntologyManipulator* onto, ros::NodeHandle* n)
   costs_.confortable = 0;
   costs_.secured = 0;
   costs_.explicable = 0;
+  costs_.fast = 0;
 }
 
 std::vector<std::string> CostComputer::splitPersonnas(std::string text)
@@ -81,6 +82,9 @@ void CostComputer::updateCosts(struct Costs cost)
 
   if(cost.explicable > costs_.explicable)
     costs_.explicable = cost.explicable;
+
+  if(cost.fast > costs_.fast)
+    costs_.fast = cost.fast;
 }
 
 void CostComputer::putInRange()
@@ -90,6 +94,7 @@ void CostComputer::putInRange()
   costs_.confortable++;
   costs_.secured++;
   costs_.explicable++;
+  costs_.fast++;
 }
 
 float CostComputer::getParamCost(std::string param)
@@ -115,6 +120,10 @@ float CostComputer::getParamCost(std::string param)
     cost = costs_.confortable;
   else if(param == "unexplicable")
     cost = 1/costs_.confortable;
+  else if(param == "fast")
+    cost = costs_.fast;
+  else if(param == "slow")
+    cost = 1/costs_.fast;
 
   if((cost > 2) || (cost < 1/2.))
     return std::numeric_limits<float>::infinity();

@@ -15,6 +15,7 @@ struct Costs
   float confortable;
   float secured;
   float explicable;
+  float fast;
 };
 
 struct Personna

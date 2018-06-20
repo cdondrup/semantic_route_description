@@ -95,6 +95,22 @@
     </owl:NamedIndividual>
 
 
+
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#unexplicable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#fast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/route_cost#cost"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#unsecured -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#slow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/route_cost#cost"/>
+    </owl:NamedIndividual>
+
+
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
