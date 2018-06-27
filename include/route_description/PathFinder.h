@@ -49,7 +49,7 @@ private:
   void getCompleteRoutes(std::string to_place);
   void appendDirection();
   void printFinalRoutes();
-  void computeCost();
+  void computeCost(std::string goal);
 
   bool testToPlace(std::string to_place);
   std::string toPlace(std::string name);

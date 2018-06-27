@@ -52,7 +52,7 @@ void PathFinder::find(std::string from_place, std::string to_place)
       getCompleteRoutes(to_place);
       printFinalRoutes();
 
-      computeCost();
+      computeCost(to_place);
     }
     else
       std::cout << "[ERROR] initial position must be a place" << std::endl;
@@ -104,7 +104,7 @@ void PathFinder::findDirections(std::string from_place, std::string to_place)
       appendDirection();
       printFinalRoutes();
 
-      computeCost();
+      computeCost(to_place);
     }
     else
       std::cout << "[ERROR] initial position must be a place" << std::endl;
@@ -155,7 +155,7 @@ void PathFinder::findRegions(std::string from_place, std::string to_place)
         goals_.push_back(to_place);
       }
 
-    computeCost();
+    computeCost(to_place);
   }
   else
     std::cout << "[ERROR] goal must be a place" << std::endl;
@@ -295,10 +295,10 @@ void PathFinder::printFinalRoutes()
   region_pathfinder.displayRoutes(completed_routes_);
 }
 
-void PathFinder::computeCost()
+void PathFinder::computeCost(std::string goal)
 {
   CostComputer cost(&onto_, n_);
-  costs_ = cost.compute(completed_routes_, personas_);
+  costs_ = cost.compute(completed_routes_, goals_, goal, personas_);
 
   for(size_t route_i = 0; route_i < costs_.size(); route_i++)
     std::cout << costs_[route_i] << std::endl;

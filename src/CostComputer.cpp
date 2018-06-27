@@ -131,7 +131,7 @@ float CostComputer::getParamCost(std::string param)
     return 1/cost;
 }
 
-std::vector<float> CostComputer::compute(routes_t& routes, std::string personas)
+std::vector<float> CostComputer::compute(routes_t& routes, std::vector<std::string> gloals, std::string goal, std::string personas)
 {
   std::vector<std::string> personas_splitted = splitPersonnas(personas);
   for(size_t i = 0; i < personas_splitted.size(); i++)
@@ -141,7 +141,10 @@ std::vector<float> CostComputer::compute(routes_t& routes, std::string personas)
 
   std::vector<float> result;
   for(size_t route_i = 0; route_i < routes.size(); route_i++)
-    result.push_back(routes[route_i].size());
+    if(gloals[route_i] == goal)
+      result.push_back(routes[route_i].size());
+    else
+      result.push_back(routes[route_i].size() * 2); //signpost over-cost
 
   std::map<std::string, float> elementCost;
   std::vector<std::string> havingCost = onto_->getRelatedFrom("hasCost");

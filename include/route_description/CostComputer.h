@@ -37,7 +37,7 @@ public:
   CostComputer(OntologyManipulator* onto, ros::NodeHandle* n);
   ~CostComputer(){}
 
-  std::vector<float> compute(routes_t& routes, std::string personas = "");
+  std::vector<float> compute(routes_t& routes, std::vector<std::string> gloals, std::string goal, std::string personas = "");
 
 private:
   OntologyManipulator* onto_;
