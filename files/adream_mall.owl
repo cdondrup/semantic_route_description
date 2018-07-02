@@ -1019,7 +1019,7 @@
     <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#robot_infodesk -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#robot_infodesk">
-        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#infodesk"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_1"/>
         <rdfs:label xml:lang="en">robot info desk</rdfs:label>
     </owl:NamedIndividual>
@@ -1029,7 +1029,7 @@
     <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#robot_infodesk_2 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#robot_infodesk_2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#infodesk"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_2"/>
         <rdfs:label xml:lang="en">robot info desk</rdfs:label>
     </owl:NamedIndividual>
