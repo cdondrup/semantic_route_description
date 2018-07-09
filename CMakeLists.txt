@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   message_generation
+  ontologenius
 )
 find_package(ontologenius 0.1.1 REQUIRED)
 
