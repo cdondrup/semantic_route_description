@@ -98,6 +98,7 @@ add_library(semantic_finder_lib
   src/CostComputer.cpp
 )
  add_dependencies(semantic_finder_lib ${catkin_EXPORTED_TARGETS})
+ target_link_libraries(semantic_finder_lib ${catkin_LIBRARIES})
 
 add_executable(description src/main.cpp)
  target_link_libraries(description
