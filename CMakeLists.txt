@@ -97,13 +97,12 @@ add_library(semantic_finder_lib
   src/PlaceToRegion.cpp
   src/CostComputer.cpp
 )
- add_dependencies(semantic_finder_lib ${catkin_EXPORTED_TARGETS})
  target_link_libraries(semantic_finder_lib ${catkin_LIBRARIES})
+ add_dependencies(semantic_finder_lib ${catkin_EXPORTED_TARGETS})
+ add_dependencies(semantic_finder_lib semantic_route_description_gencpp)
 
 add_executable(description src/main.cpp)
- target_link_libraries(description
-   ${catkin_LIBRARIES}
- )
+ target_link_libraries(description ${catkin_LIBRARIES})
  add_dependencies(description ${catkin_EXPORTED_TARGETS})
  add_dependencies(description semantic_route_description_gencpp)
  target_link_libraries(description semantic_finder_lib)
