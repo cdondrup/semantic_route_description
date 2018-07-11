@@ -29,25 +29,6 @@ bool route_handle(semantic_route_description::SemanticRoute::Request  &req,
   return true;
 }
 
-bool routeDirections_handle(semantic_route_description::SemanticRoute::Request  &req,
-                  semantic_route_description::SemanticRoute::Response &res)
-{
-  PathFinder finder(n_);
-  finder.findDirections(req.from, req.to, req.persona, req.signpost);
-
-  routes_t tmp = finder.getRoutes();
-  for(size_t i = 0; i < tmp.size(); i++)
-  {
-    semantic_route_description::Route tmp_route;
-    tmp_route.route = tmp[i];
-    res.routes.push_back(tmp_route);
-  }
-  res.costs = finder.getCosts();
-  res.goals = finder.getGoals();
-
-  return true;
-}
-
 bool routeRegion_handle(semantic_route_description::SemanticRoute::Request  &req,
                         semantic_route_description::SemanticRoute::Response &res)
 {
@@ -77,7 +58,6 @@ int main(int argc, char** argv)
   ros::service::waitForService("ontoloGenius/arguer", -1);
   ros::ServiceServer route_service = n.advertiseService("semantic_route_description/get_route", route_handle);
   ros::ServiceServer region_service = n.advertiseService("semantic_route_description/get_route_region", routeRegion_handle);
-  ros::ServiceServer direction_service = n.advertiseService("semantic_route_description/get_route_directions", routeDirections_handle);
 
   ROS_DEBUG("semantic_route_description ready");
 
