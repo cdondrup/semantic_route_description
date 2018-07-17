@@ -22,11 +22,11 @@ routes_t RegionPathfinder::find(std::string my_region, std::string goal_region)
     for(size_t route_i = 0; route_i < routes.size(); route_i++)
     {
       size_t size = routes[route_i].size() - 1;
-      std::vector<std::string> interfaces = onto_->getFrom("isIn", routes[route_i][size]);
+      std::vector<std::string> interfaces = onto_->individuals.getFrom("isIn", routes[route_i][size]);
 
       for(size_t inter = 0; inter < interfaces.size(); inter++)
       {
-        std::vector<std::string> regions = onto_->getOn(interfaces[inter], "isIn");
+        std::vector<std::string> regions = onto_->individuals.getOn(interfaces[inter], "isIn");
 
         for(size_t i = 0; i < regions.size();)
           if(std::find(routes[route_i].begin(), routes[route_i].end(), regions[i]) != routes[route_i].end())

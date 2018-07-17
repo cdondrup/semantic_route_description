@@ -13,7 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   ontologenius
 )
-find_package(ontologenius 0.1.1 REQUIRED)
+find_package(ontologenius 0.1.3 REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -85,13 +85,13 @@ catkin_package(
 include_directories(
  include
   ${catkin_INCLUDE_DIRS}
+  ${ontoloGenius_lib_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
 add_library(semantic_finder_lib
   src/PathFinder.cpp
   src/Routes.cpp
-  src/OntologyManipulator.cpp
   src/RegionPathfinder.cpp
   src/CorridorPathfinder.cpp
   src/PlacePathfinder.cpp
@@ -101,6 +101,7 @@ add_library(semantic_finder_lib
  target_link_libraries(semantic_finder_lib ${catkin_LIBRARIES})
  add_dependencies(semantic_finder_lib ${catkin_EXPORTED_TARGETS})
  add_dependencies(semantic_finder_lib semantic_route_description_gencpp)
+ target_link_libraries(semantic_finder_lib ontoloGenius_lib)
 
 add_executable(description src/main.cpp)
  target_link_libraries(description ${catkin_LIBRARIES})

@@ -23,7 +23,7 @@ void PathFinder::find(std::string from_place, std::string to_place, std::string 
   std::vector<std::string> to_places;
   if(signpost == true)
   {
-    to_places = onto_.getOn(to_place, "isReferencedBy");
+    to_places = onto_.individuals.getOn(to_place, "isReferencedBy");
   }
   to_places.push_back(to_place);
 
@@ -67,7 +67,8 @@ void PathFinder::find(std::string from_place, std::string to_place)
   std::cout << "finished computation at " << std::ctime(&end_time)
             << "elapsed time: " << elapsed_microseconds << "us\n";
 
-  std::cout << onto_.nb() << " requests done" << std::endl;
+  std::cout << onto_.individuals.nb() << " requests done" << std::endl;
+  onto_.reset();
 }
 
 void PathFinder::findDirections(std::string from_place, std::string to_place, std::string personas, bool signpost)
@@ -77,7 +78,7 @@ void PathFinder::findDirections(std::string from_place, std::string to_place, st
   std::vector<std::string> to_places;
   if(signpost == true)
   {
-    to_places = onto_.getOn(to_place, "isReferencedBy");
+    to_places = onto_.individuals.getOn(to_place, "isReferencedBy");
   }
   to_places.push_back(to_place);
 
@@ -119,7 +120,8 @@ void PathFinder::findDirections(std::string from_place, std::string to_place)
   std::cout << "finished computation at " << std::ctime(&end_time)
             << "elapsed time: " << elapsed_microseconds << "us\n";
 
-  std::cout << onto_.nb() << " requests done" << std::endl;
+  std::cout << onto_.individuals.nb() << " requests done" << std::endl;
+  onto_.reset();
 }
 
 void PathFinder::findRegions(std::string from_place, std::string to_place, std::string personas, bool signpost)
@@ -129,7 +131,7 @@ void PathFinder::findRegions(std::string from_place, std::string to_place, std::
   std::vector<std::string> to_places;
   if(signpost == true)
   {
-    to_places = onto_.getOn(to_place, "isReferencedBy");
+    to_places = onto_.individuals.getOn(to_place, "isReferencedBy");
   }
   to_places.push_back(to_place);
 
@@ -167,7 +169,8 @@ void PathFinder::findRegions(std::string from_place, std::string to_place)
   std::cout << "finished computation at " << std::ctime(&end_time)
             << "elapsed time: " << elapsed_microseconds << "us\n";
 
-  std::cout << onto_.nb() << " requests done" << std::endl;
+  std::cout << onto_.individuals.nb() << " requests done" << std::endl;
+  onto_.reset();
 }
 
 void PathFinder::init()
@@ -181,15 +184,15 @@ void PathFinder::to_regions(std::string from_place, std::string to_place)
 {
   PlaceToRegion place_to_region(&onto_);
 
-  if(onto_.isA(from_place, "place"))
+  if(onto_.individuals.isA(from_place, "place"))
     from_region_ = place_to_region.place2region(from_place);
-  else if(onto_.isA(from_place, "path"))
+  else if(onto_.individuals.isA(from_place, "path"))
   {
-    std::vector<std::string> tmp = onto_.getOn(from_place, "isIn");
+    std::vector<std::string> tmp = onto_.individuals.getOn(from_place, "isIn");
     if(tmp.size())
       from_region_.push_back(tmp[0]);
   }
-  else if(onto_.isA(from_place, "region"))
+  else if(onto_.individuals.isA(from_place, "region"))
     from_region_.push_back(from_place);
 
   to_region_ = place_to_region.place2region(to_place);
@@ -278,7 +281,7 @@ void PathFinder::appendDirection()
     for(size_t i = 1; i < completed_routes_[route_i].size(); i+=2)
     {
       std::cout << completed_routes_[route_i][i] << " : " << completed_routes_[route_i][i+1] << std::endl;
-      std::vector<std::string> props = onto_.getWith(completed_routes_[route_i][i], completed_routes_[route_i][i+1]);
+      std::vector<std::string> props = onto_.individuals.getWith(completed_routes_[route_i][i], completed_routes_[route_i][i+1]);
       if(std::find(props.begin(), props.end(), "hasPathOnLeft") != props.end())
         completed_routes_[route_i][i] += "[left]";
       else if(std::find(props.begin(), props.end(), "hasPathOnRight") != props.end())
@@ -306,5 +309,5 @@ void PathFinder::computeCost(std::string goal)
 
 bool PathFinder::testToPlace(std::string to_place)
 {
-  return onto_.isA(to_place, "place");
+  return onto_.individuals.isA(to_place, "place");
 }

@@ -1,7 +1,7 @@
 #ifndef PLACEPATHFINDER_H
 #define PLACEPATHFINDER_H
 
-#include "route_description/OntologyManipulator.h"
+#include "ontoloGenius/utility/OntologyManipulator.h"
 #include "route_description/Routes.h"
 
 #include <vector>

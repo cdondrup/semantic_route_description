@@ -6,9 +6,9 @@ routes_t PlacePathfinder::find(std::string& my_place, std::string& goal_place, s
   routes_t routes;
   CorridorPathfinder corridor_pathfinder(onto_);
 
-  std::vector<std::string> from_corridors = onto_->getOn(my_place, "isAlong");
+  std::vector<std::string> from_corridors = onto_->individuals.getOn(my_place, "isAlong");
   removeNotInRegion(from_corridors, region);
-  std::vector<std::string> to_corridors = onto_->getOn(goal_place, "isAlong");
+  std::vector<std::string> to_corridors = onto_->individuals.getOn(goal_place, "isAlong");
   removeNotInRegion(to_corridors, region);
 
   size_t min = -1;
@@ -34,7 +34,7 @@ void PlacePathfinder::removeNotInRegion(std::vector<std::string>& corridors, std
 {
   for(size_t i = 0; i < corridors.size(); )
   {
-    std::vector<std::string> regions = onto_->getOn(corridors[i], "isIn");
+    std::vector<std::string> regions = onto_->individuals.getOn(corridors[i], "isIn");
     if(std::find(regions.begin(), regions.end(), region) == regions.end())
       corridors.erase(corridors.begin() + i);
     else

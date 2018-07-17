@@ -7,7 +7,7 @@
 
 #include "ros/ros.h"
 
-#include "route_description/OntologyManipulator.h"
+#include "ontoloGenius/utility/OntologyManipulator.h"
 #include "route_description/Routes.h"
 
 class PathFinder

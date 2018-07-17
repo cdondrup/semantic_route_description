@@ -24,12 +24,12 @@ routes_t CorridorPathfinder::find(std::string& my_corridor, std::string& goal_co
     for(size_t route_i = 0; route_i < routes.size(); route_i++)
     {
       size_t size = routes[route_i].size() - 1;
-      std::vector<std::string> markers = onto_->getFrom("isAlong", routes[route_i][size], "pathIntersection");
+      std::vector<std::string> markers = onto_->individuals.getFrom("isAlong", routes[route_i][size], "pathIntersection");
       //selectIntersections(markers);
 
       for(size_t marker_i = 0; marker_i < markers.size(); marker_i++)
       {
-        std::vector<std::string> corridors = onto_->getOn(markers[marker_i], "isAlong");
+        std::vector<std::string> corridors = onto_->individuals.getOn(markers[marker_i], "isAlong");
 
         for(size_t i = 0; i < corridors.size();)
           if(std::find(routes[route_i].begin(), routes[route_i].end(), corridors[i]) != routes[route_i].end())
@@ -92,7 +92,7 @@ void CorridorPathfinder::selectIntersections(std::vector<std::string>& markers)
 {
   for(size_t i = 0; i < markers.size();)
   {
-    std::vector<std::string> ups = onto_->getUp(markers[i]);
+    std::vector<std::string> ups = onto_->individuals.getUp(markers[i]);
     if(std::find(ups.begin(), ups.end(), "pathIntersection") == ups.end())
       markers.erase(markers.begin() + i);
     else
