@@ -273,6 +273,19 @@
 
 
 
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#footbridge_door -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#footbridge_door">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#door"/>
+        <adream_mall:isAtRightOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_4"/>
+        <adream_mall:isInFrontOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_c34_intersection"/>
+        <adream_mall:hasAtRight rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#burger_king"/>
+        <place_description:isIn rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#firstfloor"/>
+        <rdfs:label xml:lang="en">door</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
     <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_c12_intersection -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_c12_intersection">
@@ -451,7 +464,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_c45_intersection">
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#pathIntersection"/>
-        <adream_mall:isAtEndEdgeOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_4"/>
+        <adream_mall:isAtBeginEdgeOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_4"/>
         <adream_mall:isAtEndEdgeOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_5"/>
         <rdfs:label xml:lang="en">intersection</rdfs:label>
     </owl:NamedIndividual>
@@ -904,7 +917,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#hairstore">
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hairdresser"/>
-        <place_description:isAtRightOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_4"/>
+        <place_description:isAtEndEdgeOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_4"/>
     </owl:NamedIndividual>
 
 
@@ -913,7 +926,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#hiustalo">
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#hairdresser"/>
-        <place_description:isAtEndEdgeOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_4"/>
+        <place_description:isAtBeginEdgeOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ff_corridor_4"/>
         <rdfs:label xml:lang="en">CM Hiustalo</rdfs:label>
     </owl:NamedIndividual>
 
