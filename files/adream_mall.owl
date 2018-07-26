@@ -101,6 +101,19 @@
 
 
 
+    <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#apartment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#apartment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#place"/>
+        <adream_mall:isAtLeftOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_walkway_2"/>
+        <adream_mall:hasAtLeft rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_ww2_os1_intersection"/>
+        <adream_mall:hasAtRight rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_ww2_os2_intersection"/>
+        <adream_mall:isInFrontOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#ilopilleri"/>
+        <rdfs:label xml:lang="en">atm</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
     <!-- http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#burger_king -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#burger_king">
@@ -871,7 +884,6 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#pathIntersection"/>
         <place_description:isAtLeftOfPath rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_walkway_2"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_1"/>
-        <place_description:hasAtLeft rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_ww2_os2_intersection"/>
         <place_description:hasAtLeft rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_interface_1"/>
         <rdfs:label xml:lang="en">intersection</rdfs:label>
     </owl:NamedIndividual>
