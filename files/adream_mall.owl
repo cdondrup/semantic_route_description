@@ -132,7 +132,7 @@
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_1"/>
         <place_description:makeReferenceTo rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#burger_king"/>
         <adream_mall:hasAtLeft rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#zizzi"/>
-        <rdfs:label xml:lang="en">burger king is at fifty meter at left</rdfs:label>
+        <rdfs:label xml:lang="en">burger king sign</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -653,7 +653,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#signpost"/>
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_walkway_1"/>
         <place_description:makeReferenceTo rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#funpark"/>
-        <rdfs:label xml:lang="en">funpark is at the firstfloor</rdfs:label>
+        <rdfs:label xml:lang="en">funpark sign</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -740,7 +740,7 @@
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_hall"/>
         <place_description:makeReferenceTo rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_toilets"/>
         <place_description:hasAtLeft rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#stairs_1"/>
-        <rdfs:label xml:lang="en">the toilets are just right</rdfs:label>
+        <rdfs:label xml:lang="en">toilet sign</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -752,7 +752,7 @@
         <adream_mall:isAlong rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#os_exp_1"/>
         <place_description:makeReferenceTo rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_toilets"/>
         <place_description:hasAtLeft rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/adream_mall#gf_ww1_os1_intersection"/>
-        <rdfs:label xml:lang="en">the toilets are just right in the hall</rdfs:label>
+        <rdfs:label xml:lang="en">toilet sign</rdfs:label>
     </owl:NamedIndividual>
 
 
