@@ -1,0 +1,3461 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="ontologenius#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="ontologenius"/>
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- ontologenius#empty_vallila_shop -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_vallila_shop">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#veistoskatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_16 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_16">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#gf_atm_west"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_9 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_9">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#elevator_west"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_empty_front_faunatar -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_empty_front_faunatar">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Faunatar"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_B"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_17 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_17">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#outside -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#outside">
+        <rdf:type rdf:resource="ontologenius#region"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#unconfortable"/>
+        <rdfs:label xml:lang="en">outside</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#carts_C -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#carts_C">
+        <rdf:type rdf:resource="ontologenius#carts"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_C"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#door_A -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#door_A">
+        <rdf:type rdf:resource="ontologenius#door"/>
+        <ontologenius:isIn rdf:resource="ontologenius#outside"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#veistoskatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#door_B -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#door_B">
+        <rdf:type rdf:resource="ontologenius#door"/>
+        <ontologenius:isIn rdf:resource="ontologenius#outside"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_B"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#door_C -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#door_C">
+        <rdf:type rdf:resource="ontologenius#door"/>
+        <ontologenius:isIn rdf:resource="ontologenius#outside"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_C"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#door_D -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#door_D">
+        <rdf:type rdf:resource="ontologenius#door"/>
+        <ontologenius:isIn rdf:resource="ontologenius#outside"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#sitruunakatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_corridor_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_corridor_east">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_corridor_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_corridor_west">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#ff_toilets_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#ff_toilets_east">
+        <rdf:type rdf:resource="ontologenius#toilets"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1B"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#gf_atm_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#gf_atm_east">
+        <rdf:type rdf:resource="ontologenius#atm"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_13"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_east"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#stairs_pancho -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#stairs_pancho">
+        <rdf:type rdf:resource="ontologenius#stairs"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Arnolds"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_kesku_east"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_pancho"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#inaccessible"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1B_corridor1east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1B_corridor1east">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_1B"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1east"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1C_corridor1food -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1C_corridor1food">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_1C"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1food"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1Dnorth_corridor1northwest -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Dnorth_corridor1northwest">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1D_north"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_1north_west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1centralnorth_corridor1northeast -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1centralnorth_corridor1northeast">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1central_north"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_1north_east"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1centralnorth_corridor1west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1centralnorth_corridor1west">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_1central_north"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridorkeskuwest_palapelikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorkeskuwest_palapelikatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridorcoffeeeast_palapelikatu"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_kesku_west"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_kompassikatu_veistoskatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_kompassikatu_veistoskatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#veistoskatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridorcoffeeeast_corridorkeskuwest -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorcoffeeeast_corridorkeskuwest">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_coffee_east"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_kesku_west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_mummola_ahja_puoti -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_mummola_ahja_puoti">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Marco_Polo"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#old_corridor_west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_pallokatu_veistoskatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_pallokatu_veistoskatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#veistoskatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#escalator_A -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#escalator_A">
+        <rdf:type rdf:resource="ontologenius#escalator"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1A_north"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1A_south"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#veistoskatu"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#confortable"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridorB_kompassikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorB_kompassikatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_B"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Bik_Bok"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridoreast_kompassikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridoreast_kompassikatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridorB_kompassikatu"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_east"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Digiman"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_palapelikatu_sauruskatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_palapelikatu_sauruskatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_emotion"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Oma_Saastopankki"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#escalator_D -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#escalator_D">
+        <rdf:type rdf:resource="ontologenius#escalator"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#sitruunakatu"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1D_north"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_1D_south"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_elisa"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_palapelikatu_sitruunakatu"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#confortable"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridorwest_palapelikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorwest_palapelikatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Tekniskamagasinet"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_west"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Thai_Papaya"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridorcoffeeeast_palapelikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorcoffeeeast_palapelikatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_coffee_east"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Kahvila_Ilopilleri"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridorcoffeeeast_corridorkeskuwest"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridorcoffeewest_palapelikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorcoffeewest_palapelikatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_coffee_west"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Gina_Tricot"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridortoiletswest_palapelikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridortoiletswest_palapelikatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_toilets_west"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Alko"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_pullonpalautus -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_pullonpalautus">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_emotion"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_emotion -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_emotion">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Prisma"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#carts_D"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sitruunakatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_palapelikatu_sitruunakatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_palapelikatu_sitruunakatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#sitruunakatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Banking_machine"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#old_interface_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#old_interface_east">
+        <rdf:type rdf:resource="ontologenius#interface"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_kesku_east"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#old_corridor_east"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#stairs_pancho"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridorkeskueast_pallokatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorkeskueast_pallokatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Halonen"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_kesku_east"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Halonen"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Arnolds"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridoreast_pallokatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridoreast_pallokatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Clas_Ohlson"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_east"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Change"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_finlayson_pop_up -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_finlayson_pop_up">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_fifi_et_fido"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_fifi_et_fido -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_fifi_et_fido">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_nahka_albert"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_nahka_albert -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_nahka_albert">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Power"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Timanttiset"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#carts_A -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#carts_A">
+        <rdf:type rdf:resource="ontologenius#carts"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Pukimo"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridortoiletseast_pallokatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridortoiletseast_pallokatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_toilets_east"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Sonera_Kauppa"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_oldcorridorwest_oldopenspace -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_oldcorridorwest_oldopenspace">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_oldcorridoreast_oldopenspace"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#old_corridor_west"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Mummola_Lahjapuoti"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_oldcorridorsouth_oldopenspace -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_oldcorridorsouth_oldopenspace">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Avain__ja_suutarityo_Helsky"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#old_corridor_south"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Kotipizza_and_Rolls_Expert"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_oldcorridoreast_oldopenspace -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_oldcorridoreast_oldopenspace">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#old_corridor_east"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Cafe_de_Lisa"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1food_corridor1little -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1food_corridor1little">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1food"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1little"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_empty_food1"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_empty_food1 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_empty_food1">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridor1food_foodpark"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1Dsouth_corridor1food"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1food"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#escalator_sauruskatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#escalator_sauruskatu">
+        <rdf:type rdf:resource="ontologenius#escalator"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1C"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1food"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1D_south"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1food_foodpark"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_Keskuspuisto_sauruskatu"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#confortable"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1food_foodpark -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1food_foodpark">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_bridge1_foodpark"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1food"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#foodpark"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Bella_Roma_and_Daddys_Diner"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1Dsouth_foodpark"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1Dsouth_foodpark -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Dsouth_foodpark">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1D_south"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#foodpark"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1C_foodpark"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1Dsouth_corridor1food"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1C_foodpark -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1C_foodpark">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_1C"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#foodpark"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_0"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1C_corridor1food"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_0 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_0">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_bridge1_foodpark"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#foodpark"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_bridge1_foodpark -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_bridge1_foodpark">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#bridge_1"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#foodpark"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Bella_Roma_and_Daddys_Diner"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#carts_B -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#carts_B">
+        <rdf:type rdf:resource="ontologenius#carts"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_B"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Faunatar"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridorC_sauruskatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorC_sauruskatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Hemtex"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_C"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Your_Face_and_Rils"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_elisa -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_elisa">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridorwest_sauruskatu"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridorwest_sauruskatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorwest_sauruskatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_west"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Farkkujen_Tehtaanmyymala"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_gamestop -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_gamestop">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Click_Shoe"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_spirit_store -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_spirit_store">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Ur_and_Penn"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridortoiletswest_palapelikatu"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#empty_spririt_store -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_spririt_store">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Life"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#old_interface_south -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#old_interface_south">
+        <rdf:type rdf:resource="ontologenius#interface"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Vila"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#old_corridor_south"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#SubWay"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#stairs_coyote -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#stairs_coyote">
+        <rdf:type rdf:resource="ontologenius#stairs"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Top_Sport"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#coyote_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#elevator_coyote"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_1"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#inaccessible"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#elevator_coyote -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#elevator_coyote">
+        <rdf:type rdf:resource="ontologenius#elevator"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#coyote_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Cafe_Linkosuo"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#confortable"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#slow"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#elevator_keskuspuisto -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#elevator_keskuspuisto">
+        <rdf:type rdf:resource="ontologenius#elevator"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#bridge_1"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#stairs_keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#stairs_keskuspuisto"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#confortable"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#slow"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#stairs_keskuspuisto -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#stairs_keskuspuisto">
+        <rdf:type rdf:resource="ontologenius#stairs"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#bridge_1"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_Keskuspuisto_corridorkeskuwest"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#inaccessible"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_Keskuspuisto_corridorkeskuwest -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_Keskuspuisto_corridorkeskuwest">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Body_Shop"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_kesku_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Pelaamo"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#pepper_infodesk -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#pepper_infodesk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#infodesk"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Gerry_Weber"/>
+        <rdfs:label xml:lang="en">robot info desk</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_Keskuspuisto_sauruskatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_Keskuspuisto_sauruskatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_Keskuspuisto_kompassikatu"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Body_Shop"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_Keskuspuisto_kompassikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_Keskuspuisto_kompassikatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#escalator_kompassikatu"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#escalator_kompassikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#escalator_kompassikatu">
+        <rdf:type rdf:resource="ontologenius#escalator"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#escalator_sauruskatu"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridor1Asouth_corridor1B"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridor1Asouth_corridor1east"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1east"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1B"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_1A_south"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Burger_King"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Zones_by_Sarkanniemi"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#confortable"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_Keskuspuisto_corridorkeskueast -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_Keskuspuisto_corridorkeskueast">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Hennes_and_Mauritz"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_kesku_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Swamp_Music"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_coyoteopenspace_bridge1 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_coyoteopenspace_bridge1">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#elevator_coyote"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#coyote_open_space"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#bridge_1"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#elevator_coyote"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_1 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_1">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Coyote_Grill"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#coyote_open_space"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1Anorth_corridor1northeast -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Anorth_corridor1northeast">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Easyfit"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1A_north"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1north_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_1A_north"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Easy_Fit_Traingin"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_1A_north -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_1A_north">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1Anorth_corridor1Asouth"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1A_north"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_2 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_2">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Easy_Fit_Traingin"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1A_north"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_3 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_3">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1north_east"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1east_corridor1northeast -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1east_corridor1northeast">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1east"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1north_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_3"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1Asouth_corridor1B -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Asouth_corridor1B">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridor1Asouth_corridor1east"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1A_south"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1B"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Masku"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1Anorth_corridor1Asouth -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Anorth_corridor1Asouth">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_2"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1A_north"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1A_south"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Netrauta"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#old_interface_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#old_interface_west">
+        <rdf:type rdf:resource="ontologenius#interface"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_kesku_west"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_coffee_east"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#old_corridor_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Marco_Polo"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_4 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_4">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#gf_toilets_telia"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_toilets_east"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_5 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_5">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_toilets_east"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#gf_toilets_telia -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#gf_toilets_telia">
+        <rdf:type rdf:resource="ontologenius#toilets"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_toilets_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_5"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#carts_D -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#carts_D">
+        <rdf:type rdf:resource="ontologenius#carts"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sitruunakatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Prisma"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_sauruskatu_sitruunakatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_sauruskatu_sitruunakatu">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#sitruunakatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#escalator_D"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_6 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_6">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#LahiTapiola_Service_desk"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1north_west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1centralnorth_corridor1east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1centralnorth_corridor1east">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridor1east_corridor1northeast"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1central_north"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Ti_Ti_Nallen_Koti"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1Asouth_corridor1east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Asouth_corridor1east">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1A_south"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#elevator_east"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#elevator_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#elevator_east">
+        <rdf:type rdf:resource="ontologenius#elevator"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1east"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_corridor_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Netrauta"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#confortable"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#slow"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1Dnorth_corridor1extremwest -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Dnorth_corridor1extremwest">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1D_north"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1extrem_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_7"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_7 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_7">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridor1Dnorth_corridor1northwest"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Oma_Saastopankki"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1D_north"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1Dnorth_corridor1Dsouth -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Dnorth_corridor1Dsouth">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1D_north"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1D_south"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_8"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_8 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_8">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1Dnorth_corridor1northwest"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1D_north"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1C_corridor1Dsouth -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1C_corridor1Dsouth">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#escalator_sauruskatu"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridor1Dsouth_corridor1food"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1C"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1D_south"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#ff_toilets_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#ff_toilets_west">
+        <rdf:type rdf:resource="ontologenius#toilets"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1C"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Zones_by_Sarkanniemi"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1Dsouth_corridor1food -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Dsouth_corridor1food">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#escalator_sauruskatu"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1D_south"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1food"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1Dsouth_corridor1west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1Dsouth_corridor1west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Dsouth_corridor1west">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1D_south"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_nordea"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_nordea -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_nordea">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1Dnorth_corridor1Dsouth"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1D_south"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1northwest_corridor1west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1northwest_corridor1west">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_11"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1north_west"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_9"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_10 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_10">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1little_corridor1west"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridor1little_corridor1west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1little_corridor1west">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_1little"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#elevator_west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#elevator_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#elevator_west">
+        <rdf:type rdf:resource="ontologenius#elevator"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1west"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1little"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_corridor_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_11"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#confortable"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#slow"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_11 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_11">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1centralnorth_corridor1west"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_12 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_12">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridoreast_corridorelevatoreast"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#gf_atm_east"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_east"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_13 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_13">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#gf_toilets_east"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_east"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#gf_toilets_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#gf_toilets_east">
+        <rdf:type rdf:resource="ontologenius#toilets"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridoreast_corridorelevatoreast"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_14 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_14">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_east"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridoreast_corridorelevatoreast -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridoreast_corridorelevatoreast">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_corridor_east"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_14"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_15 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_15">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridorelevatorwest_corridorwest"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#intersection_corridorelevatorwest_corridorwest -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorelevatorwest_corridorwest">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_17"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_corridor_west"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#gf_toilets_west"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#gf_toilets_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#gf_toilets_west">
+        <rdf:type rdf:resource="ontologenius#toilets"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_16"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#gf_atm_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#gf_atm_west">
+        <rdf:type rdf:resource="ontologenius#atm"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_17"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#empty_18 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#empty_18">
+        <rdf:type rdf:resource="ontologenius#empty_place"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1centralnorth_corridor1east"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1central_north"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#veistoskatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#veistoskatu">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">veistoskatu</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#pallokatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#pallokatu">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">pallokatu</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#kompassikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#kompassikatu">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">kompassikatu</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Keskuspuisto -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Keskuspuisto">
+        <rdf:type rdf:resource="ontologenius#openspace"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#sauruskatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#sauruskatu">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">sauruskatu</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#palapelikatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#palapelikatu">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">palapelikatu</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#sitruunakatu -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#sitruunakatu">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">sitruunakatu</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#old_corridor_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#old_corridor_east">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
+        <rdfs:label xml:lang="en">old corridor east</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#old_corridor_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#old_corridor_west">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
+        <rdfs:label xml:lang="en">old corridor west</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#old_corridor_south -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#old_corridor_south">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
+        <rdfs:label xml:lang="en">old corridor south</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#old_open_space -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#old_open_space">
+        <rdf:type rdf:resource="ontologenius#openspace"/>
+        <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
+        <rdfs:label xml:lang="en">corridor</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_C -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_C">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor C</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_B -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_B">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor B</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_east">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor east</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_west">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor west</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_elevator_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_elevator_east">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor elevator east</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_elevator_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_elevator_west">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor elevator west</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_toilets_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_toilets_east">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor toilets east</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_toilets_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_toilets_west">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor toilets west</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#foodpark -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#foodpark">
+        <rdf:type rdf:resource="ontologenius#openspace"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_kesku_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_kesku_west">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor_kesku_west</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_kesku_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_kesku_east">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor_kesku_east</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_coffee_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_coffee_west">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor_coffee_west</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_coffee_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_coffee_east">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor_coffee_east</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1B -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1B">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1B</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1C -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1C">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1C</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1D_south -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1D_south">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1D_south</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1D_north -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1D_north">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1D_north</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1A_south -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1A_south">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1A_south</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1A_north -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1A_north">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1A_north</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1food -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1food">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1food</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1west">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1west</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1east">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1east</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1central_north -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1central_north">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1central_north</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1north_east -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1north_east">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1north_east</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1extrem_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1extrem_west">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1extrem_west</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1north_west -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1north_west">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1north_west</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_1little -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_1little">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor_1little</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#bridge_1 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#bridge_1">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">bridge_1</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#corridor_pancho -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_pancho">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor pancho</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#coyote_open_space -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#coyote_open_space">
+        <rdf:type rdf:resource="ontologenius#openspace"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#first_floor -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#first_floor">
+        <rdf:type rdf:resource="ontologenius#region"/>
+        <rdf:type rdf:resource="ontologenius#region"/>
+        <rdfs:label xml:lang="en">first floor</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#ground_floor -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#ground_floor">
+        <rdf:type rdf:resource="ontologenius#region"/>
+        <rdf:type rdf:resource="ontologenius#region"/>
+        <rdfs:label xml:lang="en">ground floor</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#old_town -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#old_town">
+        <rdf:type rdf:resource="ontologenius#region"/>
+        <rdf:type rdf:resource="ontologenius#region"/>
+        <rdfs:label xml:lang="en">old town</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#BRANDI -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#BRANDI">
+        <rdf:type rdf:resource="ontologenius#"/>
+        <rdfs:label xml:lang="en">BRANDI</rdfs:label>
+        <rdfs:label xml:lang="fi">BRANDI</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Prisma -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Prisma">
+        <rdf:type rdf:resource="ontologenius#grocery_department_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sitruunakatu"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <rdfs:label xml:lang="en">Prisma</rdfs:label>
+        <rdfs:label xml:lang="fi">Prisma</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Alko -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Alko">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_toilets_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_pullonpalautus"/>
+        <rdfs:label xml:lang="en">Alko</rdfs:label>
+        <rdfs:label xml:lang="fi">Alko</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Name_It -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Name_It">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridortoiletswest_palapelikatu"/>
+        <rdfs:label xml:lang="en">Name It</rdfs:label>
+        <rdfs:label xml:lang="fi">Name It</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Budget_Sport -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Budget_Sport">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Name_It"/>
+        <rdfs:label xml:lang="en">Budget Sport</rdfs:label>
+        <rdfs:label xml:lang="fi">Budget Sport</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Toys_R_Us -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Toys_R_Us">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Budget_Sport"/>
+        <rdfs:label xml:lang="en">Toys R Us</rdfs:label>
+        <rdfs:label xml:lang="fi">Toys R Us</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Logistiikkakeskus -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Logistiikkakeskus">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+        <rdfs:label xml:lang="en">Logistiikkakeskus</rdfs:label>
+        <rdfs:label xml:lang="fi">Logistiikkakeskus</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Jesper_Junior -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Jesper_Junior">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Toys_R_Us"/>
+        <rdfs:label xml:lang="en">Jesper Junior</rdfs:label>
+        <rdfs:label xml:lang="fi">Jesper Junior</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Sievi_Shop -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Sievi_Shop">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Jesper_Junior"/>
+        <rdfs:label xml:lang="en">Sievi Shop</rdfs:label>
+        <rdfs:label xml:lang="fi">Sievi Shop</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Tekniskamagasinet -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Tekniskamagasinet">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Sievi_Shop"/>
+        <rdfs:label xml:lang="en">Tekniskamagasinet</rdfs:label>
+        <rdfs:label xml:lang="fi">Tekniskamagasinet</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Gant -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Gant">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_coffee_east"/>
+        <rdfs:label xml:lang="en">Gant</rdfs:label>
+        <rdfs:label xml:lang="fi">Gant</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kahvila_Ilopilleri -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kahvila_Ilopilleri">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_coffee_west"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_coffee_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridorcoffeewest_palapelikatu"/>
+        <rdfs:label xml:lang="en">Kahvila Ilopilleri</rdfs:label>
+        <rdfs:label xml:lang="fi">Kahvila Ilopilleri</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Tanssiopisto -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Tanssiopisto">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <rdfs:label xml:lang="en">Tanssiopisto</rdfs:label>
+        <rdfs:label xml:lang="fi">Tanssiopisto</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Juvesport -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Juvesport">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_coffee_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Gina_Tricot"/>
+        <rdfs:label xml:lang="en">Juvesport</rdfs:label>
+        <rdfs:label xml:lang="fi">Juvesport</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Easy_Fit_Traingin -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Easy_Fit_Traingin">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1A_north"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1north_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Easyfit"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Easyfit"/>
+        <rdfs:label xml:lang="en">Easy Fit Traingin</rdfs:label>
+        <rdfs:label xml:lang="fi">Easy Fit Traingin</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Ideapark_Sport_Areena -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Ideapark_Sport_Areena">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_coffee_west"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_coffee_east"/>
+        <rdfs:label xml:lang="en">Ideapark Sport Areena</rdfs:label>
+        <rdfs:label xml:lang="fi">Ideapark Sport Areena</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Gina_Tricot -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Gina_Tricot">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_coffee_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Tekniskamagasinet"/>
+        <rdfs:label xml:lang="en">Gina Tricot</rdfs:label>
+        <rdfs:label xml:lang="fi">Gina Tricot</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Marco_Polo -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Marco_Polo">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_coffee_east"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#old_corridor_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Gant"/>
+        <rdfs:label xml:lang="en">Marco Polo</rdfs:label>
+        <rdfs:label xml:lang="fi">Marco Polo</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Hairlekiini -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Hairlekiini">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridortoiletseast_pallokatu"/>
+        <rdfs:label xml:lang="en">Hairlekiini</rdfs:label>
+        <rdfs:label xml:lang="fi">Hairlekiini</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Lumo_puoti -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Lumo_puoti">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Kotipizza_and_Rolls_Expert"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_oldcorridorwest_oldopenspace"/>
+        <rdfs:label xml:lang="en">Lumo-puoti</rdfs:label>
+        <rdfs:label xml:lang="fi">Lumo-puoti</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Avain__ja_suutarityo_Helsky -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Avain__ja_suutarityo_Helsky">
+        <rdf:type rdf:resource="ontologenius#department_store"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Lumo_puoti"/>
+        <rdfs:label xml:lang="en">Avain- ja suutarityo Helsky</rdfs:label>
+        <rdfs:label xml:lang="fi">Avain- ja suutarityö Helsky</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#PiiPoo -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#PiiPoo">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Avain__ja_suutarityo_Helsky"/>
+        <rdfs:label xml:lang="en">PiiPoo</rdfs:label>
+        <rdfs:label xml:lang="fi">PiiPoo</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Cafe_de_Lisa -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Cafe_de_Lisa">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#PiiPoo"/>
+        <rdfs:label xml:lang="en">Cafe de Lisa</rdfs:label>
+        <rdfs:label xml:lang="fi">Cafe de Lisa</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Hiljainen_huone -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Hiljainen_huone">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#old_corridor_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Ballot"/>
+        <rdfs:label xml:lang="en">Hiljainen huone</rdfs:label>
+        <rdfs:label xml:lang="fi">Hiljainen huone</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Ballot -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Ballot">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#old_corridor_east"/>
+        <rdfs:label xml:lang="en">Ballot</rdfs:label>
+        <rdfs:label xml:lang="fi">Ballot</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Halonen -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Halonen">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_kesku_east"/>
+        <rdfs:label xml:lang="en">Halonen</rdfs:label>
+        <rdfs:label xml:lang="fi">Halonen</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Clas_Ohlson -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Clas_Ohlson">
+        <rdf:type rdf:resource="ontologenius#department_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Halonen"/>
+        <rdfs:label xml:lang="en">Clas Ohlson</rdfs:label>
+        <rdfs:label xml:lang="fi">Clas Ohlson</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kicks -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kicks">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Clas_Ohlson"/>
+        <rdfs:label xml:lang="en">Kicks</rdfs:label>
+        <rdfs:label xml:lang="fi">Kicks</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Power -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Power">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Kicks"/>
+        <rdfs:label xml:lang="en">Power</rdfs:label>
+        <rdfs:label xml:lang="fi">Power</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Intersport_Ideapark -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Intersport_Ideapark">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Power"/>
+        <rdfs:label xml:lang="en">Intersport Ideapark</rdfs:label>
+        <rdfs:label xml:lang="fi">Intersport Ideapark</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kalastus_Suomi -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kalastus_Suomi">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_toilets_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_4"/>
+        <rdfs:label xml:lang="en">Kalastus Suomi</rdfs:label>
+        <rdfs:label xml:lang="fi">Kalastus Suomi</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Sonera_Kauppa -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Sonera_Kauppa">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Intersport_Ideapark"/>
+        <rdfs:label xml:lang="en">Sonera Kauppa</rdfs:label>
+        <rdfs:label xml:lang="fi">Sonera Kauppa</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kukkakauppa -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kukkakauppa">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <rdfs:label xml:lang="en">Kukkakauppa</rdfs:label>
+        <rdfs:label xml:lang="fi">Kukkakauppa</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Pukimo -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Pukimo">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Hairlekiini"/>
+        <rdfs:label xml:lang="en">Pukimo</rdfs:label>
+        <rdfs:label xml:lang="fi">Pukimo</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Minimani -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Minimani">
+        <rdf:type rdf:resource="ontologenius#department_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#carts_A"/>
+        <rdfs:label xml:lang="en">Minimani</rdfs:label>
+        <rdfs:label xml:lang="fi">Minimani</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Tommy_Hilfiger -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Tommy_Hilfiger">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#veistoskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_vallila_shop"/>
+        <rdfs:label xml:lang="en">Tommy Hilfiger</rdfs:label>
+        <rdfs:label xml:lang="fi">Tommy Hilfiger</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Guess -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Guess">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#veistoskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Tommy_Hilfiger"/>
+        <rdfs:label xml:lang="en">Guess</rdfs:label>
+        <rdfs:label xml:lang="fi">Guess</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Saunalahti -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Saunalahti">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <rdfs:label xml:lang="en">Saunalahti</rdfs:label>
+        <rdfs:label xml:lang="fi">Saunalahti</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Gerry_Weber -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Gerry_Weber">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#escalator_sauruskatu"/>
+        <rdfs:label xml:lang="en">Gerry Weber</rdfs:label>
+        <rdfs:label xml:lang="fi">Gerry Weber</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Flying_Tiger_Copenhagen -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Flying_Tiger_Copenhagen">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Rax"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#pepper_infodesk"/>
+        <rdfs:label xml:lang="en">Flying Tiger Copenhagen</rdfs:label>
+        <rdfs:label xml:lang="fi">Flying Tiger Copenhagen</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Zizzi -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Zizzi">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Flying_Tiger_Copenhagen"/>
+        <rdfs:label xml:lang="en">Zizzi</rdfs:label>
+        <rdfs:label xml:lang="fi">Zizzi</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Pelaamo -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Pelaamo">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_kesku_west"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Zizzi"/>
+        <rdfs:label xml:lang="en">Pelaamo</rdfs:label>
+        <rdfs:label xml:lang="fi">Pelaamo</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Thai_Papaya -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Thai_Papaya">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Gina_Tricot"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Spice_Ice"/>
+        <rdfs:label xml:lang="en">Thai Papaya</rdfs:label>
+        <rdfs:label xml:lang="fi">Thai Papaya</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Spice_Ice -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Spice_Ice">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Aitoleipa"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_kesku_west"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Pelaamo"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridorkeskuwest_palapelikatu"/>
+        <rdfs:label xml:lang="en">Spice Ice</rdfs:label>
+        <rdfs:label xml:lang="fi">Spice Ice</rdfs:label>
+        <rdfs:label xml:lang="en">Stahlberg Home Bakery  Cafe</rdfs:label>
+        <rdfs:label xml:lang="fi">Ståhlberg Home Bakery  Cafe</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Superdry -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Superdry">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridorwest_palapelikatu"/>
+        <rdfs:label xml:lang="en">Superdry</rdfs:label>
+        <rdfs:label xml:lang="fi">Superdry</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Sinelli -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Sinelli">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Jesper_Junior"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Superdry"/>
+        <rdfs:label xml:lang="en">Sinelli</rdfs:label>
+        <rdfs:label xml:lang="fi">Sinelli</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Click_Shoe -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Click_Shoe">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Sinelli"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Iittala_Outlet"/>
+        <rdfs:label xml:lang="en">Click Shoe</rdfs:label>
+        <rdfs:label xml:lang="fi">Click Shoe</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Iittala_Outlet -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Iittala_Outlet">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Bjorn_Borg"/>
+        <rdfs:label xml:lang="en">Iittala Outlet</rdfs:label>
+        <rdfs:label xml:lang="fi">Iittala Outlet</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Reima -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Reima">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Toys_R_Us"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Click_Shoe"/>
+        <rdfs:label xml:lang="en">Reima</rdfs:label>
+        <rdfs:label xml:lang="fi">Reima</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Partioaitta -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Partioaitta">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Budget_Sport"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Reima"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Nissen"/>
+        <rdfs:label xml:lang="en">Partioaitta</rdfs:label>
+        <rdfs:label xml:lang="fi">Partioaitta</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Ur_and_Penn -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Ur_and_Penn">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Name_It"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Partioaitta"/>
+        <rdfs:label xml:lang="en">Ur  Penn</rdfs:label>
+        <rdfs:label xml:lang="fi">Ur  Penn</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kultajousi -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kultajousi">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Alko"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_spirit_store"/>
+        <rdfs:label xml:lang="en">Kultajousi</rdfs:label>
+        <rdfs:label xml:lang="fi">Kultajousi</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Life -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Life">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Kultajousi"/>
+        <ontologenius:hasAtLeft rdf:resource="ontologenius#empty_spririt_store"/>
+        <rdfs:label xml:lang="en">Life</rdfs:label>
+        <rdfs:label xml:lang="fi">Life</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Banking_machine -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Banking_machine">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <rdfs:label xml:lang="en">Banking machine</rdfs:label>
+        <rdfs:label xml:lang="fi">Banking machine</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#LahiTapiola_Service_desk -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#LahiTapiola_Service_desk">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1north_west"/>
+        <rdfs:label xml:lang="en">LahiTapiola Service desk</rdfs:label>
+        <rdfs:label xml:lang="fi">LähiTapiola Service desk</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Nissen -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Nissen">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_spririt_store"/>
+        <rdfs:label xml:lang="en">Nissen</rdfs:label>
+        <rdfs:label xml:lang="fi">Nissen</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Bjorn_Borg -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Bjorn_Borg">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Partioaitta"/>
+        <rdfs:label xml:lang="en">Bjorn Borg</rdfs:label>
+        <rdfs:label xml:lang="fi">Björn Borg</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Swamp_Music -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Swamp_Music">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#HoviKebab"/>
+        <rdfs:label xml:lang="en">Swamp Music</rdfs:label>
+        <rdfs:label xml:lang="fi">Swamp Music</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Instrumentarium -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Instrumentarium">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_gamestop"/>
+        <rdfs:label xml:lang="en">Instrumentarium</rdfs:label>
+        <rdfs:label xml:lang="fi">Instrumentarium</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Hemtex -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Hemtex">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Instrumentarium"/>
+        <rdfs:label xml:lang="en">Hemtex</rdfs:label>
+        <rdfs:label xml:lang="fi">Hemtex</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Farkkujen_Tehtaanmyymala -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Farkkujen_Tehtaanmyymala">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Hemtex"/>
+        <rdfs:label xml:lang="en">Farkkujen Tehtaanmyymala</rdfs:label>
+        <rdfs:label xml:lang="fi">Farkkujen Tehtaanmyymälä</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#SunWok -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#SunWok">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#old_corridor_east"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_oldcorridoreast_oldopenspace"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Kultaporssi"/>
+        <rdfs:label xml:lang="en">SunWok</rdfs:label>
+        <rdfs:label xml:lang="fi">SunWok</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kultaporssi -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kultaporssi">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Ballot"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#old_corridor_east"/>
+        <rdfs:label xml:lang="en">Kultaporssi</rdfs:label>
+        <rdfs:label xml:lang="fi">Kultapörssi</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#HoviKebab -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#HoviKebab">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Kotipizza_and_Rolls_Expert"/>
+        <rdfs:label xml:lang="en">HoviKebab</rdfs:label>
+        <rdfs:label xml:lang="fi">HoviKebab</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kotipizza_and_Rolls_Expert -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kotipizza_and_Rolls_Expert">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#SunWok"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#old_interface_south"/>
+        <rdfs:label xml:lang="en">Kotipizza  Rolls Expert</rdfs:label>
+        <rdfs:label xml:lang="fi">Kotipizza  Rolls Expert</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Cafe_Linkosuo -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Cafe_Linkosuo">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_kesku_west"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Aitoleipa"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#elevator_keskuspuisto"/>
+        <rdfs:label xml:lang="en">Cafe Linkosuo</rdfs:label>
+        <rdfs:label xml:lang="fi">Café Linkosuo</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Aitoleipa -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Aitoleipa">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_kesku_west"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#old_corridor_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#old_interface_west"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Mummola_Lahjapuoti"/>
+        <rdfs:label xml:lang="en">Aitoleipa</rdfs:label>
+        <rdfs:label xml:lang="fi">Aitoleipä</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Mummola_Lahjapuoti -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Mummola_Lahjapuoti">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_mummola_ahja_puoti"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#old_corridor_west"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#SubWay"/>
+        <rdfs:label xml:lang="en">Mummola Lahjapuoti</rdfs:label>
+        <rdfs:label xml:lang="fi">Mummola Lahjapuoti</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#SubWay -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#SubWay">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#old_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_oldcorridorsouth_oldopenspace"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#stairs_coyote"/>
+        <rdfs:label xml:lang="en">SubWay</rdfs:label>
+        <rdfs:label xml:lang="fi">SubWay</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Information_desk -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Information_desk">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+        <rdfs:label xml:lang="en">Information desk</rdfs:label>
+        <rdfs:label xml:lang="fi">Information desk</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Digiman -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Digiman">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <rdfs:label xml:lang="en">Digiman</rdfs:label>
+        <rdfs:label xml:lang="fi">Digiman</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Burger_King -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Burger_King">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Gerry_Weber"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Rax"/>
+        <rdfs:label xml:lang="en">Burger King</rdfs:label>
+        <rdfs:label xml:lang="fi">Burger King</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Rax -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Rax">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Hesburger"/>
+        <rdfs:label xml:lang="en">Rax</rdfs:label>
+        <rdfs:label xml:lang="fi">Rax</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Hesburger -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Hesburger">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_kesku_east"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Arnolds"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_Keskuspuisto_corridorkeskueast"/>
+        <rdfs:label xml:lang="en">Hesburger</rdfs:label>
+        <rdfs:label xml:lang="fi">Hesburger</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Arnolds -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Arnolds">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_kesku_east"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridoreast_pallokatu"/>
+        <rdfs:label xml:lang="en">Arnold's</rdfs:label>
+        <rdfs:label xml:lang="fi">Arnold's</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Change -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Change">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Kicks"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_finlayson_pop_up"/>
+        <rdfs:label xml:lang="en">Change</rdfs:label>
+        <rdfs:label xml:lang="fi">Change</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Timanttiset -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Timanttiset">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Intersport_Ideapark"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#KappAhl"/>
+        <rdfs:label xml:lang="en">Timanttiset</rdfs:label>
+        <rdfs:label xml:lang="fi">Timanttiset</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#KappAhl -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#KappAhl">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Cubus"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridortoiletseast_pallokatu"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Fortum"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#NP"/>
+        <rdfs:label xml:lang="en">KappAhl</rdfs:label>
+        <rdfs:label xml:lang="fi">KappAhl</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#NP -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#NP">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Linda_Mode"/>
+        <rdfs:label xml:lang="en">NP</rdfs:label>
+        <rdfs:label xml:lang="fi">NP</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Linda_Mode -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Linda_Mode">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Fonum"/>
+        <rdfs:label xml:lang="en">Linda Mode</rdfs:label>
+        <rdfs:label xml:lang="fi">Linda Mode</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Fonum -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Fonum">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#DNA"/>
+        <rdfs:label xml:lang="en">Fonum</rdfs:label>
+        <rdfs:label xml:lang="fi">Fonum</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#DNA -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#DNA">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#pallokatu"/>
+        <rdfs:label xml:lang="en">DNA</rdfs:label>
+        <rdfs:label xml:lang="fi">DNA</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Pentik -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Pentik">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#KappAhl"/>
+        <rdfs:label xml:lang="en">Pentik</rdfs:label>
+        <rdfs:label xml:lang="fi">Pentik</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Fortum -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Fortum">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Lagoon_Fish_Foot_Spa"/>
+        <rdfs:label xml:lang="en">Fortum</rdfs:label>
+        <rdfs:label xml:lang="fi">Fortum</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Lagoon_Fish_Foot_Spa -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Lagoon_Fish_Foot_Spa">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Lindex"/>
+        <rdfs:label xml:lang="en">Lagoon Fish Foot Spa</rdfs:label>
+        <rdfs:label xml:lang="fi">Lagoon Fish Foot Spa</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Lindex -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Lindex">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridoreast_kompassikatu"/>
+        <rdfs:label xml:lang="en">Lindex</rdfs:label>
+        <rdfs:label xml:lang="fi">Lindex</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#River_and_Co -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#River_and_Co">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sitruunakatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Musti_ja_Mirri"/>
+        <rdfs:label xml:lang="en">River  Co</rdfs:label>
+        <rdfs:label xml:lang="fi">River  Co</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Musti_ja_Mirri -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Musti_ja_Mirri">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Prisma"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sitruunakatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Kirjaporssi"/>
+        <rdfs:label xml:lang="en">Musti ja Mirri</rdfs:label>
+        <rdfs:label xml:lang="fi">Musti ja Mirri</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kirjaporssi -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kirjaporssi">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#carts_D"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sitruunakatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Suomalainen_Kirjakauppa"/>
+        <rdfs:label xml:lang="en">Kirjaporssi</rdfs:label>
+        <rdfs:label xml:lang="fi">Kirjapörssi</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Suomalainen_Kirjakauppa -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Suomalainen_Kirjakauppa">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sitruunakatu"/>
+        <rdfs:label xml:lang="en">Suomalainen Kirjakauppa</rdfs:label>
+        <rdfs:label xml:lang="fi">Suomalainen Kirjakauppa</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#KOO_Kenka -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#KOO_Kenka">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#New_Yorker"/>
+        <rdfs:label xml:lang="en">KOO Kenka</rdfs:label>
+        <rdfs:label xml:lang="fi">KOO Kenkä</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#New_Yorker -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#New_Yorker">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Din_Sko"/>
+        <rdfs:label xml:lang="en">New Yorker</rdfs:label>
+        <rdfs:label xml:lang="fi">New Yorker</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Din_Sko -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Din_Sko">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Nissen"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#CM_Hiustalo"/>
+        <rdfs:label xml:lang="en">Din Sko</rdfs:label>
+        <rdfs:label xml:lang="fi">Din Sko</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#CM_Hiustalo -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#CM_Hiustalo">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Bjorn_Borg"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Esprit_Ideapark"/>
+        <rdfs:label xml:lang="en">CM Hiustalo</rdfs:label>
+        <rdfs:label xml:lang="fi">CM Hiustalo</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Esprit_Ideapark -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Esprit_Ideapark">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Kyosho_Ideapark"/>
+        <rdfs:label xml:lang="en">Esprit Ideapark</rdfs:label>
+        <rdfs:label xml:lang="fi">Esprit Ideapark</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kyosho_Ideapark -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kyosho_Ideapark">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Glitter"/>
+        <rdfs:label xml:lang="en">Kyosho Ideapark</rdfs:label>
+        <rdfs:label xml:lang="fi">Kyosho Ideapark</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Glitter -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Glitter">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Instrumentarium"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_C"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Apteekki_Ideapark"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridorC_sauruskatu"/>
+        <rdfs:label xml:lang="en">Glitter</rdfs:label>
+        <rdfs:label xml:lang="fi">Glitter</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Apteekki_Ideapark -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Apteekki_Ideapark">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_C"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#HairStore"/>
+        <rdfs:label xml:lang="en">Apteekki Ideapark</rdfs:label>
+        <rdfs:label xml:lang="fi">Apteekki Ideapark</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#HairStore -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#HairStore">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_C"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#carts_C"/>
+        <rdfs:label xml:lang="en">HairStore</rdfs:label>
+        <rdfs:label xml:lang="fi">HairStore</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Finla -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Finla">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+        <rdfs:label xml:lang="en">Finla</rdfs:label>
+        <rdfs:label xml:lang="fi">Finla</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Your_Face_and_Rils -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Your_Face_and_Rils">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridorwest_sauruskatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Stadium"/>
+        <rdfs:label xml:lang="en">Your Face and Rils</rdfs:label>
+        <rdfs:label xml:lang="fi">Your Face and Rils</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Stadium -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Stadium">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#sauruskatu"/>
+        <rdfs:label xml:lang="en">Stadium</rdfs:label>
+        <rdfs:label xml:lang="fi">Stadium</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Body_Shop -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Body_Shop">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Mango"/>
+        <rdfs:label xml:lang="en">Body Shop</rdfs:label>
+        <rdfs:label xml:lang="fi">Body Shop</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Mango -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Mango">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Top_Sport"/>
+        <rdfs:label xml:lang="en">Mango</rdfs:label>
+        <rdfs:label xml:lang="fi">Mango</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Top_Sport -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Top_Sport">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Vila"/>
+        <rdfs:label xml:lang="en">Top-Sport</rdfs:label>
+        <rdfs:label xml:lang="fi">Top-Sport</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Vila -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Vila">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Carlings"/>
+        <rdfs:label xml:lang="en">Vila</rdfs:label>
+        <rdfs:label xml:lang="fi">Vila</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Carlings -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Carlings">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Hennes_and_Mauritz"/>
+        <rdfs:label xml:lang="en">Carlings</rdfs:label>
+        <rdfs:label xml:lang="fi">Carlings</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Hennes_and_Mauritz -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Hennes_and_Mauritz">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_B"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridorB_kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_empty_front_faunatar"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_Keskuspuisto_kompassikatu"/>
+        <rdfs:label xml:lang="en">Hennes  Mauritz</rdfs:label>
+        <rdfs:label xml:lang="fi">Hennes  Mauritz</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Dressman -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Dressman">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Hennes_and_Mauritz"/>
+        <rdfs:label xml:lang="en">Dressman</rdfs:label>
+        <rdfs:label xml:lang="fi">Dressman</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Faunatar -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Faunatar">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_B"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Kauneus__ja_jalkahoitola_Manna"/>
+        <rdfs:label xml:lang="en">Faunatar</rdfs:label>
+        <rdfs:label xml:lang="fi">Faunatar</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kauneus__ja_jalkahoitola_Manna -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kauneus__ja_jalkahoitola_Manna">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_B"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Bik_Bok"/>
+        <rdfs:label xml:lang="en">Kauneus- ja jalkahoitola Manna</rdfs:label>
+        <rdfs:label xml:lang="fi">Kauneus- ja jalkahoitola Manna</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Bik_Bok -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Bik_Bok">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Lindex"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_B"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Vero_Moda,_JandJ"/>
+        <rdfs:label xml:lang="en">Bik Bok</rdfs:label>
+        <rdfs:label xml:lang="fi">Bik Bok</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Vero_Moda,_JandJ -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Vero_Moda,_JandJ">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Lagoon_Fish_Foot_Spa"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Kristyle"/>
+        <rdfs:label xml:lang="en">Vero Moda, JJ</rdfs:label>
+        <rdfs:label xml:lang="fi">Vero Moda, JJ</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Kristyle -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kristyle">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Fortum"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Cubus"/>
+        <rdfs:label xml:lang="en">Kristyle</rdfs:label>
+        <rdfs:label xml:lang="fi">Kristyle</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Cubus -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Cubus">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Shoe_Store"/>
+        <rdfs:label xml:lang="en">Cubus</rdfs:label>
+        <rdfs:label xml:lang="fi">Cubus</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Shoe_Store -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Shoe_Store">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Brother_Clothing"/>
+        <rdfs:label xml:lang="en">Shoe Store</rdfs:label>
+        <rdfs:label xml:lang="fi">Shoe Store</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Brother_Clothing -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Brother_Clothing">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#BR_lelut"/>
+        <rdfs:label xml:lang="en">Brother Clothing</rdfs:label>
+        <rdfs:label xml:lang="fi">Brother Clothing</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#BR_lelut -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#BR_lelut">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Pentik"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Dressmann_XL"/>
+        <rdfs:label xml:lang="en">BR-lelut</rdfs:label>
+        <rdfs:label xml:lang="fi">BR-lelut</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Dressmann_XL -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Dressmann_XL">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Aleksi_13"/>
+        <rdfs:label xml:lang="en">Dressmann XL</rdfs:label>
+        <rdfs:label xml:lang="fi">Dressmann XL</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Aleksi_13 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Aleksi_13">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_vallila_shop"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#veistoskatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#kompassikatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Unikulma"/>
+        <rdfs:label xml:lang="en">Aleksi 13</rdfs:label>
+        <rdfs:label xml:lang="fi">Aleksi 13</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Unikulma -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Unikulma">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Tommy_Hilfiger"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#veistoskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Marimekko_Outlet"/>
+        <rdfs:label xml:lang="en">Unikulma</rdfs:label>
+        <rdfs:label xml:lang="fi">Unikulma</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Marimekko_Outlet -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Marimekko_Outlet">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Guess"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#veistoskatu"/>
+        <rdfs:label xml:lang="en">Marimekko Outlet</rdfs:label>
+        <rdfs:label xml:lang="fi">Marimekko Outlet</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Easyfit -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Easyfit">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1A_north"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_1north_east"/>
+        <rdfs:label xml:lang="en">Easyfit</rdfs:label>
+        <rdfs:label xml:lang="fi">Easyfit</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Bella_Roma_and_Daddys_Diner -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Bella_Roma_and_Daddys_Diner">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_0"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1food"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#foodpark"/>
+        <rdfs:label xml:lang="en">Bella Roma  Daddy's Diner</rdfs:label>
+        <rdfs:label xml:lang="fi">Bella Roma  Daddy's Diner</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Oma_Saastopankki -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Oma_Saastopankki">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridor1Dnorth_corridor1Dsouth"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#palapelikatu"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1D_north"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Life"/>
+        <rdfs:label xml:lang="en">Oma Saastopankki</rdfs:label>
+        <rdfs:label xml:lang="fi">Oma Säästöpankki</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Pancho_Villa -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Pancho_Villa">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_pancho"/>
+        <rdfs:label xml:lang="en">Pancho Villa</rdfs:label>
+        <rdfs:label xml:lang="fi">Pancho Villa</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Coyote_Grill -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Coyote_Grill">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#bridge_1"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#coyote_open_space"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_coyoteopenspace_bridge1"/>
+        <rdfs:label xml:lang="en">Coyote Grill</rdfs:label>
+        <rdfs:label xml:lang="fi">Coyote Grill</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Ti_Ti_Nallen_Koti -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Ti_Ti_Nallen_Koti">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#escalator_kompassikatu"/>
+        <rdfs:label xml:lang="en">Ti-Ti Nallen Koti</rdfs:label>
+        <rdfs:label xml:lang="fi">Ti-Ti Nallen Koti</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Netrauta -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Netrauta">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1east"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1A_south"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1Asouth_corridor1east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1east_corridor1northeast"/>
+        <rdfs:label xml:lang="en">Netrauta</rdfs:label>
+        <rdfs:label xml:lang="fi">Netrauta</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Zones_by_Sarkanniemi -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Zones_by_Sarkanniemi">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_nordea"/>
+        <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1C"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1B"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1D_south"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#ff_toilets_east"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#escalator_sauruskatu"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridor1C_corridor1Dsouth"/>
+        <rdfs:label xml:lang="en">Zones by Sarkanniemi</rdfs:label>
+        <rdfs:label xml:lang="fi">Zones by Särkänniemi</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Masku -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Masku">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#Netrauta"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1A_south"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Finnlandia"/>
+        <rdfs:label xml:lang="en">Masku</rdfs:label>
+        <rdfs:label xml:lang="fi">Masku</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Finnlandia -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Finnlandia">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+        <ontologenius:isInFrontOf rdf:resource="ontologenius#intersection_corridor1Anorth_corridor1Asouth"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1A_south"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#Eurokangas"/>
+        <rdfs:label xml:lang="en">Finnlandia</rdfs:label>
+        <rdfs:label xml:lang="fi">Finnlandia</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ontologenius#Eurokangas -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Eurokangas">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1A_south"/>
+        <rdfs:label xml:lang="en">Eurokangas</rdfs:label>
+        <rdfs:label xml:lang="fi">Eurokangas</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the ontologenius https://sarthou.github.io/ontologenius/ -->
