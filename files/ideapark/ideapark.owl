@@ -130,19 +130,27 @@
 
 
 
-    <!-- ontologenius#corridor_corridor_east -->
 
-    <owl:NamedIndividual rdf:about="ontologenius#corridor_corridor_east">
+    <!-- ontologenius#corridor_elevator_east -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_elevator_east">
         <rdf:type rdf:resource="ontologenius#corridor"/>
-    </owl:NamedIndividual>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor elevator east</rdfs:label>
+    </owl:NamedIndividual>
 
 
 
-    <!-- ontologenius#corridor_corridor_west -->
 
-    <owl:NamedIndividual rdf:about="ontologenius#corridor_corridor_west">
+    <!-- ontologenius#corridor_elevator_west -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_elevator_west">
         <rdf:type rdf:resource="ontologenius#corridor"/>
-    </owl:NamedIndividual>
+        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
+        <rdfs:label xml:lang="en">corridor elevator west</rdfs:label>
+    </owl:NamedIndividual>
 
 
 
@@ -175,6 +183,7 @@
         <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_kesku_east"/>
         <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_pancho"/>
         <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#inaccessible"/>
+        <rdfs:label xml:lang="en">stairs</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -750,6 +759,7 @@
         <ontologenius:hasAtRight rdf:resource="ontologenius#elevator_coyote"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#empty_1"/>
         <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#inaccessible"/>
+        <rdfs:label xml:lang="en">stairs</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -795,6 +805,7 @@
         <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_Keskuspuisto_corridorkeskuwest"/>
         <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#inaccessible"/>
+        <rdfs:label xml:lang="en">stairs</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -816,6 +827,7 @@
     <owl:NamedIndividual rdf:about="ontologenius#pepper_infodesk">
         <rdf:type rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#infodesk"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#Gerry_Weber"/>
+        <ontologenius:isAlong rdf:resource="ontologenius#Keskuspuisto"/>
         <rdfs:label xml:lang="en">robot info desk</rdfs:label>
     </owl:NamedIndividual>
 
@@ -1080,7 +1092,7 @@
         <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
         <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
         <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1east"/>
-        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_corridor_east"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_elevator_east"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#Netrauta"/>
         <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#confortable"/>
         <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#slow"/>
@@ -1227,7 +1239,7 @@
         <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
         <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1west"/>
         <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1little"/>
-        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_corridor_west"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_elevator_west"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#empty_11"/>
         <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#confortable"/>
         <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#slow"/>
@@ -1289,7 +1301,7 @@
 
     <owl:NamedIndividual rdf:about="ontologenius#intersection_corridoreast_corridorelevatoreast">
         <rdf:type rdf:resource="ontologenius#pathIntersection"/>
-        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_corridor_east"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_elevator_east"/>
         <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_east"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#empty_14"/>
     </owl:NamedIndividual>
@@ -1311,7 +1323,7 @@
     <owl:NamedIndividual rdf:about="ontologenius#intersection_corridorelevatorwest_corridorwest">
         <rdf:type rdf:resource="ontologenius#pathIntersection"/>
         <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_17"/>
-        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_corridor_west"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_elevator_west"/>
         <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_west"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#gf_toilets_west"/>
     </owl:NamedIndividual>
@@ -1423,7 +1435,7 @@
     <owl:NamedIndividual rdf:about="ontologenius#old_corridor_east">
         <rdf:type rdf:resource="ontologenius#corridor"/>
         <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
-        <rdfs:label xml:lang="en">old corridor east</rdfs:label>
+        <rdfs:label xml:lang="en">passage</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -1433,7 +1445,7 @@
     <owl:NamedIndividual rdf:about="ontologenius#old_corridor_west">
         <rdf:type rdf:resource="ontologenius#corridor"/>
         <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
-        <rdfs:label xml:lang="en">old corridor west</rdfs:label>
+        <rdfs:label xml:lang="en">passage</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -1443,7 +1455,7 @@
     <owl:NamedIndividual rdf:about="ontologenius#old_corridor_south">
         <rdf:type rdf:resource="ontologenius#corridor"/>
         <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
-        <rdfs:label xml:lang="en">old corridor south</rdfs:label>
+        <rdfs:label xml:lang="en">passage</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -1494,26 +1506,6 @@
         <rdf:type rdf:resource="ontologenius#corridor"/>
         <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
         <rdfs:label xml:lang="en">corridor west</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- ontologenius#corridor_elevator_east -->
-
-    <owl:NamedIndividual rdf:about="ontologenius#corridor_elevator_east">
-        <rdf:type rdf:resource="ontologenius#corridor"/>
-        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
-        <rdfs:label xml:lang="en">corridor elevator east</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- ontologenius#corridor_elevator_west -->
-
-    <owl:NamedIndividual rdf:about="ontologenius#corridor_elevator_west">
-        <rdf:type rdf:resource="ontologenius#corridor"/>
-        <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
-        <rdfs:label xml:lang="en">corridor elevator west</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -1762,8 +1754,8 @@
 
     <owl:NamedIndividual rdf:about="ontologenius#first_floor">
         <rdf:type rdf:resource="ontologenius#region"/>
-        <rdf:type rdf:resource="ontologenius#region"/>
         <rdfs:label xml:lang="en">first floor</rdfs:label>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#unexplicable"/>
     </owl:NamedIndividual>
 
 
@@ -1772,8 +1764,8 @@
 
     <owl:NamedIndividual rdf:about="ontologenius#ground_floor">
         <rdf:type rdf:resource="ontologenius#region"/>
-        <rdf:type rdf:resource="ontologenius#region"/>
         <rdfs:label xml:lang="en">ground floor</rdfs:label>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#unexplicable"/>
     </owl:NamedIndividual>
 
 
@@ -1782,8 +1774,8 @@
 
     <owl:NamedIndividual rdf:about="ontologenius#old_town">
         <rdf:type rdf:resource="ontologenius#region"/>
-        <rdf:type rdf:resource="ontologenius#region"/>
         <rdfs:label xml:lang="en">old town</rdfs:label>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#unexplicable"/>
     </owl:NamedIndividual>
 
 
