@@ -50,6 +50,7 @@ void PathFinder::find(std::string from_place, std::string to_place)
 
       createPlace2Place();
       getCompleteRoutes(to_place);
+      getFineRoutes();
       printFinalRoutes();
 
       computeCost(to_place);
@@ -310,4 +311,27 @@ void PathFinder::computeCost(std::string goal)
 bool PathFinder::testToPlace(std::string to_place)
 {
   return onto_.individuals.isA(to_place, "place");
+}
+
+void PathFinder::getFineRoutes()
+{
+  routes_t tmp = completed_routes_;
+  for(size_t i = 0; i < completed_routes_.size();)
+  {
+    bool erase = false;
+    for(size_t j = 0; j < completed_routes_[i].size(); j++)
+      if(onto_.individuals.isA(completed_routes_[i][j], "region") == true)
+      {
+        erase = true;
+        break;
+      }
+
+    if(erase == true)
+      completed_routes_.erase(completed_routes_.begin() + i);
+    else
+      i++;
+  }
+
+  if(completed_routes_.size() == 0)
+    completed_routes_ = tmp;
 }

@@ -53,6 +53,8 @@ private:
 
   bool testToPlace(std::string to_place);
   std::string toPlace(std::string name);
+
+  void getFineRoutes();
 };
 
 #endif
