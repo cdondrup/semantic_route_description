@@ -3363,7 +3363,7 @@
     <owl:NamedIndividual rdf:about="ontologenius#Pancho_Villa">
         <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
         <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_pancho"/>
-        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_pancho2"/>
+        <!--ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_pancho2"/-->
         <rdfs:label xml:lang="en">Pancho Villa</rdfs:label>
         <rdfs:label xml:lang="fi">Pancho Villa</rdfs:label>
     </owl:NamedIndividual>
