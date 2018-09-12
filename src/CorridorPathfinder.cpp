@@ -25,17 +25,26 @@ routes_t CorridorPathfinder::find(std::string& my_corridor, std::string& goal_co
     {
       size_t size = routes[route_i].size() - 1;
       std::vector<std::string> markers = onto_->individuals.getFrom("isAlong", routes[route_i][size], "pathIntersection");
-      //selectIntersections(markers);
 
       for(size_t marker_i = 0; marker_i < markers.size(); marker_i++)
       {
         std::vector<std::string> corridors = onto_->individuals.getOn(markers[marker_i], "isAlong");
 
         for(size_t i = 0; i < corridors.size();)
-          if(std::find(routes[route_i].begin(), routes[route_i].end(), corridors[i]) != routes[route_i].end())
+        {
+          bool erase = false;
+          for(size_t j = 0; j < routes.size(); j++)
+            if(std::find(routes[j].begin(), routes[j].end(), corridors[i]) != routes[j].end())
+            {
+              erase = true;
+              break;
+            }
+
+          if(erase == true)
             corridors.erase(corridors.begin() + i);
           else
             i++;
+        }
 
         for(size_t i = 0; i < corridors.size(); i++)
         {
