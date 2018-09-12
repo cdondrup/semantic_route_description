@@ -1,0 +1,1350 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="ontologenius#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="ontologenius"/>
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+     <!-- ontologenius#Sinelli -->
+
+
+     <owl:NamedIndividual rdf:about="ontologenius#Sinelli">
+         <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+         <ontologenius:sells rdf:resource="ontologenius#cards_and_papers"/>
+         <ontologenius:hasLogo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http:\/\/lempaala.ideapark.fi\/wp-content\/uploads\/2018\/06\/sinelli_thumbnailxl.jpg","image":"http:\/\/lempaala.ideapark.fi\/wp-content\/uploads\/2018\/06\/sinelli_thumbnailxl.jpg</hasLogo:objectHave3Dposition>
+     </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Prisma -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Prisma">
+        <rdf:type rdf:resource="ontologenius#grocery_department_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Alko -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Alko">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Name_It -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Name_It">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Budget_Sport -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Budget_Sport">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Toys_R_Us -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Toys_R_Us">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Logistiikkakeskus -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Logistiikkakeskus">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Jesper_Junior -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Jesper_Junior">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Sievi_Shop -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Sievi_Shop">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Tekniskamagasinet -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Tekniskamagasinet">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Gant -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Gant">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kahvila_Ilopilleri -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kahvila_Ilopilleri">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Tanssiopisto -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Tanssiopisto">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Juvesport -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Juvesport">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Easy_Fit_Traingin -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Easy_Fit_Traingin">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Ideapark_Sport_Areena -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Ideapark_Sport_Areena">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Gina_Tricot -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Gina_Tricot">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Marco_Polo -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Marco_Polo">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Hairlekiini -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Hairlekiini">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Lumo_puoti -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Lumo_puoti">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Avain__ja_suutarityo_Helsky -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Avain__ja_suutarityo_Helsky">
+        <rdf:type rdf:resource="ontologenius#department_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#PiiPoo -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#PiiPoo">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Cafe_de_Lisa -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Cafe_de_Lisa">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Hiljainen_huone -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Hiljainen_huone">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Ballot -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Ballot">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Halonen -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Halonen">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Clas_Ohlson -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Clas_Ohlson">
+        <rdf:type rdf:resource="ontologenius#department_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kicks -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kicks">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Power -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Power">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Intersport_Ideapark -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Intersport_Ideapark">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kalastus_Suomi -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kalastus_Suomi">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Sonera_Kauppa -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Sonera_Kauppa">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kukkakauppa -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kukkakauppa">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Pukimo -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Pukimo">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Minimani -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Minimani">
+        <rdf:type rdf:resource="ontologenius#department_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Tommy_Hilfiger -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Tommy_Hilfiger">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Guess -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Guess">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Saunalahti -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Saunalahti">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Gerry_Weber -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Gerry_Weber">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Flying_Tiger_Copenhagen -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Flying_Tiger_Copenhagen">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Zizzi -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Zizzi">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Pelaamo -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Pelaamo">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Thai_Papaya -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Thai_Papaya">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Spice_Ice -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Spice_Ice">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Superdry -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Superdry">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Click_Shoe -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Click_Shoe">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Iittala_Outlet -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Iittala_Outlet">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Reima -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Reima">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Partioaitta -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Partioaitta">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Ur_and_Penn -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Ur_and_Penn">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kultajousi -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kultajousi">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Life -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Life">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Banking_machine -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Banking_machine">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#LahiTapiola_Service_desk -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#LahiTapiola_Service_desk">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Nissen -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Nissen">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Bjorn_Borg -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Bjorn_Borg">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Swamp_Music -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Swamp_Music">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Instrumentarium -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Instrumentarium">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Hemtex -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Hemtex">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Farkkujen_Tehtaanmyymala -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Farkkujen_Tehtaanmyymala">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#SunWok -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#SunWok">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kultaporssi -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kultaporssi">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#HoviKebab -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#HoviKebab">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kotipizza_and_Rolls_Expert -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kotipizza_and_Rolls_Expert">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Cafe_Linkosuo -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Cafe_Linkosuo">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Aitoleipa -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Aitoleipa">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Mummola_Lahjapuoti -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Mummola_Lahjapuoti">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#SubWay -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#SubWay">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Information_desk -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Information_desk">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Digiman -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Digiman">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Burger_King -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Burger_King">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Rax -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Rax">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Hesburger -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Hesburger">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Arnolds -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Arnolds">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Change -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Change">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Timanttiset -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Timanttiset">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#KappAhl -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#KappAhl">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#NP -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#NP">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Linda_Mode -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Linda_Mode">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Fonum -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Fonum">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#DNA -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#DNA">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Pentik -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Pentik">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Fortum -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Fortum">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Lagoon_Fish_Foot_Spa -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Lagoon_Fish_Foot_Spa">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Lindex -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Lindex">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#River_and_Co -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#River_and_Co">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Musti_ja_Mirri -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Musti_ja_Mirri">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kirjaporssi -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kirjaporssi">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Suomalainen_Kirjakauppa -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Suomalainen_Kirjakauppa">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#KOO_Kenka -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#KOO_Kenka">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#New_Yorker -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#New_Yorker">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Din_Sko -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Din_Sko">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#CM_Hiustalo -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#CM_Hiustalo">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Esprit_Ideapark -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Esprit_Ideapark">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kyosho_Ideapark -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kyosho_Ideapark">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Glitter -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Glitter">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Apteekki_Ideapark -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Apteekki_Ideapark">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#HairStore -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#HairStore">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Finla -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Finla">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Your_Face_and_Rils -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Your_Face_and_Rils">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Stadium -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Stadium">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Body_Shop -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Body_Shop">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Mango -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Mango">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Top_Sport -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Top_Sport">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Vila -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Vila">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Carlings -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Carlings">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Hennes_and_Mauritz -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Hennes_and_Mauritz">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Dressman -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Dressman">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Faunatar -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Faunatar">
+        <rdf:type rdf:resource="ontologenius#speciality_retailer"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kauneus__ja_jalkahoitola_Manna -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kauneus__ja_jalkahoitola_Manna">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Bik_Bok -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Bik_Bok">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Vero_Moda,_JandJ -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Vero_Moda,_JandJ">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Kristyle -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Kristyle">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Cubus -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Cubus">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Shoe_Store -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Shoe_Store">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Brother_Clothing -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Brother_Clothing">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#BR_lelut -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#BR_lelut">
+        <rdf:type rdf:resource="ontologenius#leisure_sport_store"/>
+
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Dressmann_XL -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Dressmann_XL">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Aleksi_13 -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Aleksi_13">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Unikulma -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Unikulma">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Marimekko_Outlet -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Marimekko_Outlet">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Easyfit -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Easyfit">
+        <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Bella_Roma_and_Daddys_Diner -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Bella_Roma_and_Daddys_Diner">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Oma_Saastopankki -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Oma_Saastopankki">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Pancho_Villa -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Pancho_Villa">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Coyote_Grill -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Coyote_Grill">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Ti_Ti_Nallen_Koti -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Ti_Ti_Nallen_Koti">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Netrauta -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Netrauta">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Zones_by_Sarkanniemi -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Zones_by_Sarkanniemi">
+        <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Masku -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Masku">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Finnlandia -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Finnlandia">
+        <rdf:type rdf:resource="ontologenius#furnishing_decor_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Eurokangas -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#Eurokangas">
+        <rdf:type rdf:resource="ontologenius#fashion_store"/>
+    </owl:NamedIndividual>
+
+
+
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the ontologenius https://sarthou.github.io/ontologenius/ -->
