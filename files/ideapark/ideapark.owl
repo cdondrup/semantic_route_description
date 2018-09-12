@@ -374,7 +374,6 @@
         <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_coffee_east"/>
         <ontologenius:isAtRightOfPath rdf:resource="ontologenius#palapelikatu"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#Kahvila_Ilopilleri"/>
-        <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_corridorcoffeeeast_corridorkeskuwest"/>
     </owl:NamedIndividual>
 
 
@@ -1074,6 +1073,18 @@
 
 
 
+
+    <!-- ontologenius#intersection_corridor1centralnorth_corridorpancho2 -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1centralnorth_corridorpancho2">
+        <rdf:type rdf:resource="ontologenius#pathIntersection"/>
+        <ontologenius:isAtBeginEdgeOfPath rdf:resource="ontologenius#corridor_pancho2"/>
+        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1central_north"/>
+        <ontologenius:hasAtRight rdf:resource="ontologenius#empty_18"/>
+    </owl:NamedIndividual>
+
+
+
     <!-- ontologenius#intersection_corridor1Asouth_corridor1east -->
 
     <owl:NamedIndividual rdf:about="ontologenius#intersection_corridor1Asouth_corridor1east">
@@ -1737,6 +1748,18 @@
         <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
         <rdfs:label xml:lang="en">corridor pancho</rdfs:label>
     </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#corridor_pancho -->
+
+
+    <owl:NamedIndividual rdf:about="ontologenius#corridor_pancho2">
+        <rdf:type rdf:resource="ontologenius#corridor"/>
+        <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
+        <rdfs:label xml:lang="en">corridor pancho</rdfs:label>
+    </owl:NamedIndividual>
 
 
 
@@ -3312,6 +3335,10 @@
         <ontologenius:isAlong rdf:resource="ontologenius#foodpark"/>
         <rdfs:label xml:lang="en">Bella Roma  Daddy's Diner</rdfs:label>
         <rdfs:label xml:lang="fi">Bella Roma  Daddy's Diner</rdfs:label>
+        <rdfs:label xml:lang="en">Daddy's Diner</rdfs:label>
+        <rdfs:label xml:lang="fi">Daddy's Diner</rdfs:label>
+        <rdfs:label xml:lang="en">Bella Roma</rdfs:label>
+        <rdfs:label xml:lang="fi">Bella Roma</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -3336,6 +3363,7 @@
     <owl:NamedIndividual rdf:about="ontologenius#Pancho_Villa">
         <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
         <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_pancho"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_pancho2"/>
         <rdfs:label xml:lang="en">Pancho Villa</rdfs:label>
         <rdfs:label xml:lang="fi">Pancho Villa</rdfs:label>
     </owl:NamedIndividual>
