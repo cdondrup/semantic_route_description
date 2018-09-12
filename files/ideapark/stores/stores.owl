@@ -31,6 +31,17 @@
 
 
 
+     <!-- ontologenius#Bella_Roma_and_Daddys_Diner -->
+
+
+     <owl:NamedIndividual rdf:about="ontologenius#Bella_Roma_and_Daddys_Diner">
+         <rdf:type rdf:resource="ontologenius#italian_restaurant"/>
+         <ontologenius:sells rdf:resource="ontologenius#pizza"/>
+     </owl:NamedIndividual>
+
+
+
+
     <!-- ontologenius#Prisma -->
 
 
@@ -1237,16 +1248,6 @@
 
     <owl:NamedIndividual rdf:about="ontologenius#Easyfit">
         <rdf:type rdf:resource="ontologenius#health_beauty_store"/>
-    </owl:NamedIndividual>
-
-
-
-
-    <!-- ontologenius#Bella_Roma_and_Daddys_Diner -->
-
-
-    <owl:NamedIndividual rdf:about="ontologenius#Bella_Roma_and_Daddys_Diner">
-        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
     </owl:NamedIndividual>
 
 

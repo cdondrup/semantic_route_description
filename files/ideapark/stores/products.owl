@@ -71,6 +71,22 @@
 
 
 
+      <!-- ontologenius#food -->
+
+      <owl:Class rdf:about="ontologenius#food">
+          <rdfs:subClassOf rdf:resource="ontologenius#product"/>
+      </owl:Class>
+
+
+
+      <!-- ontologenius#pizza -->
+
+      <owl:Class rdf:about="ontologenius#pizza">
+          <rdfs:subClassOf rdf:resource="ontologenius#food"/>
+      </owl:Class>
+
+
+
       <!-- ontologenius#grocery_department_store -->
 
       <owl:Class rdf:about="ontologenius#grocery_department_store">
@@ -139,6 +155,14 @@
 
       <owl:Class rdf:about="ontologenius#health_beauty_store">
           <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#shop"/>
+      </owl:Class>
+
+
+
+      <!-- ontologenius#cafe_restaurant -->
+
+      <owl:Class rdf:about="ontologenius#italian_restaurant">
+          <rdfs:subClassOf rdf:resource="ontologenius#cafe_restaurant"/>
       </owl:Class>
 
 
