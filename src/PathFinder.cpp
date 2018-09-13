@@ -152,11 +152,10 @@ void PathFinder::findRegions(std::string from_place, std::string to_place)
     getRegionRoutes();
 
     for(size_t i = 0; i < routes_.size(); i++)
-      for(size_t j = 0; j < routes_[i].size(); j++)
-      {
-        completed_routes_.push_back(routes_[i][j]);
-        goals_.push_back(to_place);
-      }
+    {
+      completed_routes_.push_back(routes_[i]);
+      goals_.push_back(to_place);
+    }
 
     computeCost(to_place);
   }
@@ -214,17 +213,19 @@ void PathFinder::getRegionRoutes()
   RegionPathfinder region_pathfinder(&onto_);
   for(size_t from = 0; from < from_region_.size(); from++)
     for(size_t to = 0; to < to_region_.size(); to++)
-      routes_.push_back(region_pathfinder.find(from_region_[from], to_region_[to]));
+    {
+      routes_t tmp = region_pathfinder.find(from_region_[from], to_region_[to]);
+      routes_.insert(routes_.end(), tmp.begin(), tmp.end());
+    }
 }
 
 void PathFinder::appendFromAndTo(std::string from_place, std::string to_place)
 {
   for(size_t i = 0; i < routes_.size(); i++)
-    for(size_t route_i = 0; route_i < routes_[i].size(); route_i++)
-    {
-      routes_[i][route_i].insert(routes_[i][route_i].begin(), from_place);
-      routes_[i][route_i].push_back(to_place);
-    }
+  {
+    routes_[i].insert(routes_[i].begin(), from_place);
+    routes_[i].push_back(to_place);
+  }
 }
 
 void PathFinder::createPlace2Place()
@@ -233,16 +234,13 @@ void PathFinder::createPlace2Place()
 
   for(size_t i = 0; i < routes_.size(); i++)
   {
-    for(size_t route_i = 0; route_i < routes_[i].size(); route_i++)
+    for(size_t place_i = 0; place_i + 2 < routes_[i].size(); place_i+=2)
     {
-      for(size_t place_i = 0; place_i + 2 < routes_[i][route_i].size(); place_i+=2)
+      std::string id = routes_[i][place_i] + ":" + routes_[i][place_i + 1] + ":" + routes_[i][place_i + 2];
+      if(place2place_.find(id) == place2place_.end())
       {
-        std::string id = routes_[i][route_i][place_i] + ":" + routes_[i][route_i][place_i + 1] + ":" + routes_[i][route_i][place_i + 2];
-        if(place2place_.find(id) == place2place_.end())
-        {
-          routes_t corridors = place_pathfinder.find(routes_[i][route_i][place_i], routes_[i][route_i][place_i + 2], routes_[i][route_i][place_i + 1]);
-          place2place_[id] = corridors;
-        }
+        routes_t corridors = place_pathfinder.find(routes_[i][place_i], routes_[i][place_i + 2], routes_[i][place_i + 1]);
+        place2place_[id] = corridors;
       }
     }
   }
@@ -252,27 +250,24 @@ void PathFinder::getCompleteRoutes(std::string to_place)
 {
   for(size_t i = 0; i < routes_.size(); i++)
   {
-    for(size_t route_i = 0; route_i < routes_[i].size(); route_i++)
+    goals_.push_back(to_place);
+    routes_t tmp_routes;
     {
-      goals_.push_back(to_place);
-      routes_t tmp_routes;
-      {
-        std::vector<std::string> tmp;
-        tmp.push_back(routes_[i][route_i][0]);
-        tmp_routes.push_back(tmp);
-      }
-      for(size_t place_i = 0; place_i + 2 < routes_[i][route_i].size(); place_i+=2)
-      {
-        std::string id = routes_[i][route_i][place_i] + ":" + routes_[i][route_i][place_i + 1] + ":" + routes_[i][route_i][place_i + 2];
-
-        if(place2place_[id].size() != 0)
-          append(tmp_routes, place2place_[id]);
-        else
-          append(tmp_routes, routes_[i][route_i][place_i+1]);
-        append(tmp_routes, routes_[i][route_i][place_i+2]);
-      }
-      completed_routes_.insert(completed_routes_.end(), tmp_routes.begin(), tmp_routes.end());
+      std::vector<std::string> tmp;
+      tmp.push_back(routes_[i][0]);
+      tmp_routes.push_back(tmp);
     }
+    for(size_t place_i = 0; place_i + 2 < routes_[i].size(); place_i+=2)
+    {
+      std::string id = routes_[i][place_i] + ":" + routes_[i][place_i + 1] + ":" + routes_[i][place_i + 2];
+
+      if(place2place_[id].size() != 0)
+        append(tmp_routes, place2place_[id]);
+      else
+        append(tmp_routes, routes_[i][place_i+1]);
+      append(tmp_routes, routes_[i][place_i+2]);
+    }
+    completed_routes_.insert(completed_routes_.end(), tmp_routes.begin(), tmp_routes.end());
   }
 }
 

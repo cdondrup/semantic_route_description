@@ -34,7 +34,7 @@ private:
   std::vector<std::string> from_region_;
   std::vector<std::string> to_region_;
   std::string personas_;
-  std::vector<routes_t> routes_;
+  routes_t routes_;
   std::map<std::string, routes_t> place2place_;
 
   routes_t completed_routes_;
