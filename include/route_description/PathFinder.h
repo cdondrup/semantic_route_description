@@ -18,8 +18,6 @@ public:
 
   void find(std::string from_place, std::string to_place, std::string personas, bool signpost = false);
   void find(std::string from_place, std::string to_place);
-  void findDirections(std::string from_place, std::string to_place, std::string personas, bool signpost = false);
-  void findDirections(std::string from_place, std::string to_place);
   void findRegions(std::string from_place, std::string to_place, std::string personas, bool signpost = false);
   void findRegions(std::string from_place, std::string to_place);
 
@@ -47,7 +45,6 @@ private:
   void appendFromAndTo(std::string from_place, std::string to_place);
   void createPlace2Place();
   void getCompleteRoutes(std::string to_place);
-  void appendDirection();
   void printFinalRoutes();
   void computeCost(std::string goal);
 
