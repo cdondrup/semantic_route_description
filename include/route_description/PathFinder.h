@@ -16,8 +16,9 @@ public:
   PathFinder(ros::NodeHandle* n);
   ~PathFinder() {}
 
+  void find(std::string from_place, std::string to_place, std::string personas, bool signpost, route_t region_route);
   void find(std::string from_place, std::string to_place, std::string personas, bool signpost = false);
-  void find(std::string from_place, std::string to_place);
+  void find(std::string from_place, std::string to_place, route_t region_route);
   void findRegions(std::string from_place, std::string to_place, std::string personas, bool signpost = false);
   void findRegions(std::string from_place, std::string to_place);
 

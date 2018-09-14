@@ -45,7 +45,7 @@ routes_t RegionPathfinder::find(std::string my_region, std::string goal_region)
         }
       }
     }
-    routes = tmp_routes;
+    routes.swap(tmp_routes);
   }
 
   for(size_t i = 0; i < routes.size();)

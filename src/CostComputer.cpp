@@ -146,21 +146,21 @@ std::vector<float> CostComputer::compute(routes_t& routes, std::vector<std::stri
     else
       result.push_back(routes[route_i].size() * 2); //signpost over-cost
 
-  std::map<std::string, float> elementCost;
+  float elementCost;
   std::vector<std::string> havingCost = onto_->individuals.getRelatedFrom("hasCost");
   for(size_t i = 0; i < havingCost.size(); i++)
   {
-    elementCost[havingCost[i]] = 1.0;
+    elementCost = 1.0;
     std::vector<std::string> cost = onto_->individuals.getOn(havingCost[i], "hasCost");
     for(size_t j = 0; j < cost.size(); j++)
     {
-      elementCost[havingCost[i]] = elementCost[havingCost[i]] * getParamCost(cost[j]);
+      elementCost = elementCost * getParamCost(cost[j]);
     }
 
     for(size_t route_i = 0; route_i < routes.size(); route_i++)
     {
       if(std::find(routes[route_i].begin(), routes[route_i].end(), havingCost[i]) != routes[route_i].end())
-        result[route_i] = result[route_i]*elementCost[havingCost[i]];
+        result[route_i] = result[route_i]*elementCost;
     }
   }
 

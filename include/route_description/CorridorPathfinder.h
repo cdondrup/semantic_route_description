@@ -15,13 +15,11 @@ public:
 
   routes_t find(std::string& my_corridor, std::string& goal_corridor, size_t& max_step);
 
-  void displayRoutes(routes_t routes);
-  void displayRoute(route_t route);
+  void displayRoutes(routes_t& routes);
+  void displayRoute(route_t& route);
 
 private:
   OntologyManipulator* onto_;
-
-  void selectIntersections(std::vector<std::string>& markers);
 };
 
 #endif

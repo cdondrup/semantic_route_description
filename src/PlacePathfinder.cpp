@@ -16,13 +16,12 @@ routes_t PlacePathfinder::find(std::string& my_place, std::string& goal_place, s
     for(size_t to = 0; to < to_corridors.size(); to++)
     {
       std::vector<std::vector<std::string>> corridors = corridor_pathfinder.find(from_corridors[from], to_corridors[to], min);
-      for(size_t i = 0; i < corridors.size(); i++)
-        routes.push_back(corridors[i]);
+      routes.insert(routes.end(), corridors.begin(), corridors.end());
     }
 
-  min = 2*min + 1;
+  min = 2*min + 2; // (2*min + 1) + 1
   for(size_t i = 0; i < routes.size();)
-    if(routes[i].size() > min+1)
+    if(routes[i].size() > min)
       routes.erase(routes.begin() + i);
     else
       i++;

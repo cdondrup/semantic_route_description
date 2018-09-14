@@ -14,7 +14,8 @@ bool route_handle(semantic_route_description::SemanticRoute::Request  &req,
                   semantic_route_description::SemanticRoute::Response &res)
 {
   PathFinder finder(n_);
-  finder.find(req.from, req.to, req.persona, req.signpost);
+
+  finder.find(req.from, req.to, req.persona, req.signpost, req.route.route);
 
   routes_t tmp = finder.getRoutes();
   for(size_t i = 0; i < tmp.size(); i++)

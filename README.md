@@ -23,6 +23,7 @@ string from
 string to
 string persona
 bool signpost
+Route route
 ---
 Route[] routes
 float32[] costs

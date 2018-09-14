@@ -16,6 +16,25 @@ PathFinder::PathFinder(ros::NodeHandle* n) : onto_(n)
   onto_.close();
 }
 
+void PathFinder::find(std::string from_place, std::string to_place, std::string personas, bool signpost, route_t region_route)
+{
+  if(region_route.size() == 0)
+    find(from_place, to_place, personas, signpost);
+  else
+  {
+    personas_ = personas;
+
+    std::vector<std::string> to_places;
+    to_places.push_back(to_place);
+
+    for(size_t i = 0; i < to_places.size(); i++)
+    {
+      find(from_place, to_places[i], region_route);
+      std::cout << to_places[i] << std::endl;
+    }
+  }
+}
+
 void PathFinder::find(std::string from_place, std::string to_place, std::string personas, bool signpost)
 {
   personas_ = personas;
@@ -27,14 +46,15 @@ void PathFinder::find(std::string from_place, std::string to_place, std::string 
   }
   to_places.push_back(to_place);
 
+  route_t empty_route;
   for(size_t i = 0; i < to_places.size(); i++)
   {
-    find(from_place, to_places[i]);
+    find(from_place, to_places[i], empty_route);
     std::cout << to_places[i] << std::endl;
   }
 }
 
-void PathFinder::find(std::string from_place, std::string to_place)
+void PathFinder::find(std::string from_place, std::string to_place, route_t region_route)
 {
   std::chrono::time_point<std::chrono::system_clock> start, end;
   start = std::chrono::system_clock::now();
@@ -45,7 +65,10 @@ void PathFinder::find(std::string from_place, std::string to_place)
     {
       init();
       to_regions(from_place, to_place);
-      getRegionRoutes();
+      if(region_route.size() == 0)
+        getRegionRoutes();
+      else
+        routes_.push_back(region_route);
       appendFromAndTo(from_place, to_place);
 
       createPlace2Place();
