@@ -3333,15 +3333,29 @@
         <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_0"/>
         <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1food"/>
         <ontologenius:isAlong rdf:resource="ontologenius#foodpark"/>
-        <rdfs:label xml:lang="en">Bella Roma  Daddy's Diner</rdfs:label>
-        <rdfs:label xml:lang="fi">Bella Roma  Daddy's Diner</rdfs:label>
+        <rdfs:label xml:lang="en">Bella Roma and Daddy's Diner</rdfs:label>
+        <rdfs:label xml:lang="fi">Bella Roma and Daddy's Diner</rdfs:label>
         <rdfs:label xml:lang="en">Daddy's Diner</rdfs:label>
         <rdfs:label xml:lang="fi">Daddy's Diner</rdfs:label>
         <rdfs:label xml:lang="en">Bella Roma</rdfs:label>
         <rdfs:label xml:lang="fi">Bella Roma</rdfs:label>
     </owl:NamedIndividual>
 
+    <!-- ontologenius#Daddys_Diner >
 
+    <owl:NamedIndividual rdf:about="ontologenius#Daddys_Diner">
+        <owl:sameAs rdf:resource="ontologenius#Bella_Roma_and_Daddys_Diner"/>
+        <rdfs:label xml:lang="en">Daddy's Diner</rdfs:label>
+        <rdfs:label xml:lang="fi">Daddy's Diner</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- ontologenius#Bella_Roma >
+
+    <owl:NamedIndividual rdf:about="ontologenius#Bella_Roma">
+        <owl:sameAs rdf:resource="ontologenius#Bella_Roma_and_Daddys_Diner"/>
+        <rdfs:label xml:lang="en">Bella Roma</rdfs:label>
+        <rdfs:label xml:lang="fi">Bella Roma</rdfs:label>
+    </owl:NamedIndividual-->
 
     <!-- ontologenius#Oma_Saastopankki -->
 
@@ -3363,7 +3377,6 @@
     <owl:NamedIndividual rdf:about="ontologenius#Pancho_Villa">
         <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
         <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_pancho"/>
-        <!--ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#corridor_pancho2"/-->
         <rdfs:label xml:lang="en">Pancho Villa</rdfs:label>
         <rdfs:label xml:lang="fi">Pancho Villa</rdfs:label>
     </owl:NamedIndividual>
@@ -3380,6 +3393,18 @@
         <rdfs:label xml:lang="en">Coyote Grill</rdfs:label>
         <rdfs:label xml:lang="fi">Coyote Grill</rdfs:label>
     </owl:NamedIndividual>
+
+
+
+
+    <!-- ontologenius#Sticky_Wingers -->
+
+    <owl:NamedIndividual rdf:about="ontologenius#Sticky_Wingers">
+        <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
+        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#bridge_1"/>
+        <rdfs:label xml:lang="en">Sticky Wingers</rdfs:label>
+        <rdfs:label xml:lang="fi">Sticky Wingers</rdfs:label>
+    </owl:NamedIndividual>
 
 
 
