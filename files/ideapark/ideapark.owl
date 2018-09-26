@@ -796,6 +796,8 @@
         <ontologenius:hasAtRight rdf:resource="ontologenius#elevator_coyote"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#empty_1"/>
         <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#inaccessible"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#explicable"/>
+        <route_cost:hasCost rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/route_cost#salient"/>
         <rdfs:label xml:lang="en">stairs</rdfs:label>
     </owl:NamedIndividual>
 
@@ -3472,7 +3474,6 @@
 
     <owl:NamedIndividual rdf:about="ontologenius#Coyote_Grill">
         <rdf:type rdf:resource="ontologenius#cafe_restaurant"/>
-        <ontologenius:isAtEndEdgeOfPath rdf:resource="ontologenius#bridge_1"/>
         <ontologenius:isAlong rdf:resource="ontologenius#coyote_open_space"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#intersection_coyoteopenspace_bridge1"/>
         <rdfs:label xml:lang="en">Coyote Grill</rdfs:label>

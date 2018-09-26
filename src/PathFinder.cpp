@@ -220,7 +220,6 @@ void PathFinder::getCompleteRoutes(std::string to_place)
 {
   for(size_t i = 0; i < routes_.size(); i++)
   {
-    goals_.push_back(to_place);
     routes_t tmp_routes;
     {
       std::vector<std::string> tmp;
@@ -238,6 +237,8 @@ void PathFinder::getCompleteRoutes(std::string to_place)
       append(tmp_routes, routes_[i][place_i+2]);
     }
     completed_routes_.insert(completed_routes_.end(), tmp_routes.begin(), tmp_routes.end());
+    for(size_t route_i = 0; route_i < tmp_routes.size(); route_i++)
+      goals_.push_back(to_place);
   }
 }
 
