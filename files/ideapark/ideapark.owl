@@ -1426,7 +1426,8 @@
     <owl:NamedIndividual rdf:about="ontologenius#Keskuspuisto">
         <rdf:type rdf:resource="ontologenius#openspace"/>
         <ontologenius:isIn rdf:resource="ontologenius#ground_floor"/>
-        <rdfs:label xml:lang="en">corridor</rdfs:label>
+        <rdfs:label xml:lang="en">Keskuspuisto</rdfs:label>
+        <rdfs:label xml:lang="en">square</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -1496,7 +1497,7 @@
     <owl:NamedIndividual rdf:about="ontologenius#old_open_space">
         <rdf:type rdf:resource="ontologenius#openspace"/>
         <ontologenius:isIn rdf:resource="ontologenius#old_town"/>
-        <rdfs:label xml:lang="en">corridor</rdfs:label>
+        <rdfs:label xml:lang="en">crossroads</rdfs:label>
     </owl:NamedIndividual>
 
 
@@ -1566,7 +1567,7 @@
     <owl:NamedIndividual rdf:about="ontologenius#foodpark">
         <rdf:type rdf:resource="ontologenius#openspace"/>
         <ontologenius:isIn rdf:resource="ontologenius#first_floor"/>
-        <rdfs:label xml:lang="en">corridor</rdfs:label>
+        <rdfs:label xml:lang="en">foodpark</rdfs:label>
     </owl:NamedIndividual>
 
 
