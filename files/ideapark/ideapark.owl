@@ -3526,7 +3526,6 @@
         <rdf:type rdf:resource="ontologenius#commercial_public_service"/>
         <ontologenius:isInFrontOf rdf:resource="ontologenius#empty_nordea"/>
         <ontologenius:isAtRightOfPath rdf:resource="ontologenius#corridor_1C"/>
-        <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1B"/>
         <ontologenius:isAtLeftOfPath rdf:resource="ontologenius#corridor_1D_south"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#ff_toilets_east"/>
         <ontologenius:hasAtRight rdf:resource="ontologenius#escalator_sauruskatu"/>
