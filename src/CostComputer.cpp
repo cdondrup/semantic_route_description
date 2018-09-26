@@ -153,6 +153,40 @@ std::vector<float> CostComputer::compute(routes_t& routes, std::vector<std::stri
     elementCost = 1.0;
     std::vector<std::string> cost = onto_->individuals.getOn(havingCost[i], "hasCost");
     for(size_t j = 0; j < cost.size(); j++)
+      elementCost = elementCost * getParamCost(cost[j]);
+
+    for(size_t route_i = 0; route_i < routes.size(); route_i++)
+    {
+      if(std::find(routes[route_i].begin(), routes[route_i].end(), havingCost[i]) != routes[route_i].end())
+        result[route_i] = result[route_i]*elementCost;
+    }
+  }
+
+  return result;
+}
+
+std::vector<float> CostComputer::compute(routes_t& routes, std::vector<std::string> gloals, std::string goal, std::string personas, std::vector<float> pre_costs)
+{
+  std::vector<std::string> personas_splitted = splitPersonnas(personas);
+  for(size_t i = 0; i < personas_splitted.size(); i++)
+    getParam(personas_splitted[i]);
+
+  putInRange();
+
+  std::vector<float> result;
+  for(size_t route_i = 0; route_i < routes.size(); route_i++)
+    if(gloals[route_i] == goal)
+      result.push_back(routes[route_i].size());
+    else
+      result.push_back(routes[route_i].size() * 2); //signpost over-cost
+
+  float elementCost;
+  std::vector<std::string> havingCost = onto_->individuals.getRelatedFrom("hasCost");
+  for(size_t i = 0; i < havingCost.size(); i++)
+  {
+    elementCost = 1.0;
+    std::vector<std::string> cost = onto_->individuals.getOn(havingCost[i], "hasCost");
+    for(size_t j = 0; j < cost.size(); j++)
     {
       elementCost = elementCost * getParamCost(cost[j]);
     }
@@ -163,6 +197,14 @@ std::vector<float> CostComputer::compute(routes_t& routes, std::vector<std::stri
         result[route_i] = result[route_i]*elementCost;
     }
   }
+
+  if(result.size() == pre_costs.size())
+  {
+    for(size_t i = 0; i < result.size(); i++)
+      result[i] = result[i] * pre_costs[i];
+  }
+  else
+    std::cout << "Pre_costs not took into account : " << result.size() << " | " << pre_costs.size() << std::endl;
 
   return result;
 }

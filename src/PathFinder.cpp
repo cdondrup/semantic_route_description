@@ -69,6 +69,12 @@ void PathFinder::find(std::string from_place, std::string to_place, route_t regi
         getRegionRoutes();
       else
         routes_.push_back(region_route);
+
+      for(size_t i = 0; i < routes_.size(); i++)
+      {
+        regions_costs_.push_back((routes_[i].size() - 1) / 2. + 1);
+      }
+
       appendFromAndTo(from_place, to_place);
 
       createPlace2Place();
@@ -218,6 +224,7 @@ void PathFinder::createPlace2Place()
 
 void PathFinder::getCompleteRoutes(std::string to_place)
 {
+  std::vector<float> regions_costs;
   for(size_t i = 0; i < routes_.size(); i++)
   {
     routes_t tmp_routes;
@@ -238,8 +245,12 @@ void PathFinder::getCompleteRoutes(std::string to_place)
     }
     completed_routes_.insert(completed_routes_.end(), tmp_routes.begin(), tmp_routes.end());
     for(size_t route_i = 0; route_i < tmp_routes.size(); route_i++)
+    {
       goals_.push_back(to_place);
+      regions_costs.push_back(regions_costs_[i]);
+    }
   }
+  regions_costs_ = regions_costs;
 }
 
 void PathFinder::printFinalRoutes()
@@ -252,7 +263,7 @@ void PathFinder::printFinalRoutes()
 void PathFinder::computeCost(std::string goal)
 {
   CostComputer cost(&onto_, n_);
-  costs_ = cost.compute(completed_routes_, goals_, goal, personas_);
+  costs_ = cost.compute(completed_routes_, goals_, goal, personas_, regions_costs_);
 
   for(size_t route_i = 0; route_i < costs_.size(); route_i++)
     std::cout << costs_[route_i] << std::endl;
@@ -277,7 +288,11 @@ void PathFinder::getFineRoutes()
       }
 
     if(erase == true)
+    {
       completed_routes_.erase(completed_routes_.begin() + i);
+      goals_.erase(goals_.begin() + i);
+      regions_costs_.erase(regions_costs_.begin() + i);
+    }
     else
       i++;
   }

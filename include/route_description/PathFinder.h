@@ -35,6 +35,7 @@ private:
   std::string personas_;
   routes_t routes_;
   std::map<std::string, routes_t> place2place_;
+  std::vector<float> regions_costs_;
 
   routes_t completed_routes_;
   std::vector<float> costs_;
