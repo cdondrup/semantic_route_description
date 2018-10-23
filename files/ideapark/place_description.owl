@@ -554,6 +554,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#cafe_restaurant">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gsarthou/ontologies/2018/place_description#shop"/>
+        <rdfs:label xml:lang="en">cafe</rdfs:label>
+        <rdfs:label xml:lang="en">restaurant</rdfs:label>
     </owl:Class>
 
 
